@@ -26,7 +26,7 @@ void Templates::populateTemplates()
 
     for(int i = 0; i < templates.size(); i++){
         QPushButton* templateButton = new QPushButton(templates.at(i)["name"].toString());
-        templateButton->setStyleSheet("QPushButton { background: #c3c3c3; border: 2px solid black; margin: 10px; } QPushButton:hover {background: #884422; color: #c3c3c3} ");
+        templateButton->setStyleSheet("QPushButton { color: #884422; background: #c3c3c3; border: 2px solid black; margin: 10px; font: 20pt; } QPushButton:hover {background: #884422; color: #c3c3c3} ");
         templateButton->setMinimumHeight(50);
         connect(templateButton, SIGNAL(clicked()), this, SLOT(on_editTemplate()));
         ui->templatesList->addWidget(templateButton);
