@@ -22,7 +22,6 @@ void Templates::populateTemplates()
     QJsonArray templates = readTemplates();
 
     for(int i = 0; i < templates.size(); i++){
-        qDebug() << "HERE";
         QPushButton* templateButton = new QPushButton(templates.at(i)["name"].toString());
         connect(templateButton,SIGNAL(clicked()),this,SLOT(on_editTemplate()));
         ui->templatesLayout->addWidget(templateButton);
