@@ -12,8 +12,89 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->showMaximized();
 
+    QJsonArray bookArr = readBooks();
+    int booksFinished = 0, pagesRead = 0, daysReadingBooks = 0;
+    QVector<int> booksByPages;
+    booksByPages.push_back(0);
+    booksByPages.push_back(0);
+    booksByPages.push_back(0);
+    booksByPages.push_back(0);
+    booksByPages.push_back(0);
+    booksByPages.push_back(0);
+    booksByPages.push_back(0);
+    for(const auto &p : bookArr)
+    {
+        QJsonObject object = p.toObject();
+        if(object.value("dateFinished")!=NULL)
+        {
+            pagesRead += object.value("pages").toInt();
+            booksFinished++;
+            QDate startDate = QDate::fromString(object.value("dateStarted").toString(),"d.M.yyyy");
+            QDate finishDate = QDate::fromString(object.value("dateFinished").toString(),"d.M.yyyy");
+            daysReadingBooks += startDate.daysTo(finishDate);
+            if(object.value("pages").toInt()<100)
+            {
+                booksByPages[0]++;
+            }
+            else if(object.value("pages").toInt()<101)
+            {
+                booksByPages[1]++;
+            }
+            else if(object.value("pages").toInt()<201)
+            {
+                booksByPages[2]++;
+            }
+            else if(object.value("pages").toInt()<301)
+            {
+                booksByPages[3]++;
+            }
+            else if(object.value("pages").toInt()<401)
+            {
+                booksByPages[4]++;
+            }
+            else if(object.value("pages").toInt()<501)
+            {
+                booksByPages[5]++;
+            }
+            else
+            {
+                booksByPages[6]++;
+            }
+        }
+    }
+    ui->booksReadNum->setText(QString::number(booksFinished));
+    ui->pagesReadNum->setText(QString::number(pagesRead));
+    if(booksFinished != 0)
+    {
+        ui->bookLengthAvgByPages->setText(QString::number(pagesRead/booksFinished));
+    }
+    else
+    {
+        ui->bookLengthAvgByPages->setText("0");
+    }
+    if(daysReadingBooks != 0)
+    {
+        ui->pageAverageRead->setText(QString::number(pagesRead/daysReadingBooks));
+    }
+    else
+    {
+        ui->pageAverageRead->setText("0");
+    }
+    if(booksFinished != 0)
+    {
+        ui->bookLengthByTime->setText(QString::number(daysReadingBooks/booksFinished));
+    }
+    else
+    {
+        ui->bookLengthByTime->setText("0");
+    }
+
+    //==============bar chart start=============
     QBarSet *pagesBars = new QBarSet("Books Read");
-    *pagesBars << 0 << 2 << 5 << 6 << 1 << 0 << 1;
+    for(int i=0; i<7; i++)
+    {
+        *pagesBars << booksByPages[i];
+    }
     QBarSeries *series = new QBarSeries();
     series->append(pagesBars);
 
@@ -34,8 +115,10 @@ MainWindow::MainWindow(QWidget *parent)
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
     chart->setTitle("Брой книги по страници");
+    chart->legend()->setVisible(false);
 
     ui->chartBookPages->setChart(chart);
+    //==============bar chart end=============
 }
 
 MainWindow::~MainWindow()
