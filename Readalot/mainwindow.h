@@ -12,6 +12,8 @@
 #include <QtCharts/QPieSeries>
 #include <QtCharts/QPieSlice>
 #include <QJsonObject>
+#include <QPixmap>
+#include <QDir>
 #include <vector>
 
 

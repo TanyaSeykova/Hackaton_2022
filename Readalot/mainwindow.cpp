@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //MainWindow w;
+    //w.showMaximized();
     this->showMaximized();
 
     QJsonArray bookArr = readBooks();
@@ -136,6 +138,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->genrePieChart->setChart(chartPie);
     //==============genres pie chart end=====================
+    QPixmap imgLeft(QDir::currentPath() + "/resources/left.png");
+    QPixmap imgRight(QDir::currentPath() + "/resources/right.png");
+    ui->picLeft->setPixmap(imgLeft);
+    ui->picRight->setPixmap(imgRight);
 }
 
 MainWindow::~MainWindow()
