@@ -22,272 +22,17 @@ QLineEdit {
 }</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="15" column="6" colspan="2">
-    <layout class="QFormLayout" name="formLayout_28">
+   <item row="0" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_26">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_25">
+      <widget class="QLabel" name="label_28">
        <property name="text">
-        <string>Историческа коректност:</string>
+        <string>Избери шаблон:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_15">
-       <item>
-        <property name="text">
-         <string>📜</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜📜</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜📜1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜📜📜</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜📜📜1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>📜📜📜📜📜</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="4" column="0" colspan="4">
-    <layout class="QFormLayout" name="formLayout_6">
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelPublisher">
-       <property name="text">
-        <string>Издателство:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_3"/>
-     </item>
-    </layout>
-   </item>
-   <item row="8" column="0" colspan="2">
-    <layout class="QFormLayout" name="formLayout_27">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_12">
-       <property name="text">
-        <string>Придобита от:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_6">
-       <item>
-        <property name="text">
-         <string>Купена</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Подарена</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Библиотека</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Заета</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Пиратствана</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="11" column="7">
-    <layout class="QFormLayout" name="formLayout_20">
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_9">
-       <item>
-        <property name="text">
-         <string>Твърда</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Мека</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_20">
-       <property name="text">
-        <string>Магическа система:</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="11" column="0" colspan="6">
-    <layout class="QFormLayout" name="formLayout_19">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_19">
-       <property name="text">
-        <string>Вид фентъзи</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_8">
-       <item>
-        <property name="text">
-         <string>Ърбан</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Приключенско</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Средновековно</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Стиймпънк</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Паранормална романтика</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="14" column="6" colspan="2">
-    <layout class="QFormLayout" name="formLayout_25">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_27">
-       <property name="text">
-        <string>Противност:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_14">
-       <item>
-        <property name="text">
-         <string>🤮</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮🤮</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮🤮1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮🤮🤮</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮🤮🤮1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🤮🤮🤮🤮🤮</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="12" column="0" colspan="5">
-    <layout class="QFormLayout" name="formLayout_21">
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_10">
-       <item>
-        <property name="text">
-         <string>Твърда</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Мека</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Дистопия</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_23">
-       <property name="text">
-        <string>Вид научна фантастика:</string>
-       </property>
-      </widget>
+      <widget class="QComboBox" name="comboBoxTemplate"/>
      </item>
     </layout>
    </item>
@@ -301,28 +46,243 @@ QLineEdit {
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEditName"/>
      </item>
     </layout>
    </item>
-   <item row="9" column="0">
-    <widget class="QCheckBox" name="checkBox">
-     <property name="text">
-      <string>Преводна</string>
-     </property>
-    </widget>
+   <item row="1" column="2" colspan="2">
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelAuthor">
+       <property name="text">
+        <string>Автор:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditAuthor"/>
+     </item>
+    </layout>
    </item>
-   <item row="7" column="6" colspan="2">
+   <item row="1" column="4">
+    <layout class="QFormLayout" name="formLayout_29">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelSeries">
+       <property name="text">
+        <string>Поредица</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditSeries"/>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelDateStarted">
+       <property name="text">
+        <string>Дата започната:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDateEdit" name="dateEditStarted"/>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_4">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelDateFinished">
+       <property name="text">
+        <string>Дата завършена:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDateEdit" name="dateEditFinished"/>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_5">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelScore">
+       <property name="text">
+        <string>Оценка:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxScore">
+       <item>
+        <property name="text">
+         <string>⭐</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐⭐</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐⭐1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐⭐⭐</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐⭐⭐1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>⭐⭐⭐⭐⭐</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_6">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelPublisher">
+       <property name="text">
+        <string>Издателство:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditPublished"/>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_10">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelPublished">
+       <property name="text">
+        <string>Дата на публикуване:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDateEdit" name="dateEdit_3"/>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_11">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelPublishedBulgaria">
+       <property name="text">
+        <string>Дата на публикуване в България:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDateEdit" name="dateEditPublishedBulgaria"/>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_12">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditPages"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelPages">
+       <property name="text">
+        <string>Брой страници:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_13">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelFormat">
+       <property name="text">
+        <string>Формат:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxFormat">
+       <item>
+        <property name="text">
+         <string>Книжен носител</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Електронна книга</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="0" colspan="3">
+    <layout class="QFormLayout" name="formLayout_14">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelFicnonfic">
+       <property name="text">
+        <string>Художествена / нехудожествена:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxFicnonfic">
+       <item>
+        <property name="text">
+         <string>Художествена</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Нехудожествена</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="3" colspan="2">
     <layout class="QFormLayout" name="formLayout_15">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_11">
+      <widget class="QLabel" name="labelGenre">
        <property name="text">
         <string>Жанр:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_5">
+      <widget class="QComboBox" name="comboBoxGenre">
        <item>
         <property name="text">
          <string>Обща художествена литература</string>
@@ -397,236 +357,92 @@ QLineEdit {
      </item>
     </layout>
    </item>
-   <item row="6" column="4" colspan="4">
-    <layout class="QFormLayout" name="formLayout_13">
+   <item row="8" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_27">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="labelSource">
        <property name="text">
-        <string>Формат:</string>
+        <string>Придобита от:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_3">
+      <widget class="QComboBox" name="comboBoxSource">
        <item>
         <property name="text">
-         <string>Книжен носител</string>
+         <string>Купена</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Електронна книга</string>
+         <string>Подарена</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Библиотека</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Заета</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Пиратствана</string>
         </property>
        </item>
       </widget>
      </item>
     </layout>
    </item>
-   <item row="13" column="0" colspan="2">
-    <layout class="QFormLayout" name="formLayout_23">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_22">
-       <property name="text">
-        <string>Мистерия:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_12">
-       <item>
-        <property name="text">
-         <string>🔎</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎🔎</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎🔎1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎🔎🔎</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎🔎🔎1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>🔎🔎🔎🔎🔎</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="6" column="0" colspan="4">
-    <layout class="QFormLayout" name="formLayout_12">
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_4"/>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>Брой страници:</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="16" column="0" colspan="9">
-    <layout class="QFormLayout" name="formLayout_16">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_16">
-       <property name="text">
-        <string>Общи бележки</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
-   </item>
-   <item row="14" column="0" colspan="4">
-    <layout class="QFormLayout" name="formLayout_24">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_24">
-       <property name="text">
-        <string>Страшно:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_13">
-       <item>
-        <property name="text">
-         <string>😱</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱😱</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱😱1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱😱😱</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱😱😱1/2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>😱😱😱😱😱</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="2" column="4" colspan="4">
-    <layout class="QFormLayout" name="formLayout_4">
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelDateFinished">
-       <property name="text">
-        <string>Дата завършена:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QDateEdit" name="dateEdit_2"/>
-     </item>
-    </layout>
-   </item>
-   <item row="7" column="0" colspan="6">
-    <layout class="QFormLayout" name="formLayout_14">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Художествена / нехудожествена:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_4">
-       <item>
-        <property name="text">
-         <string>Художествена</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Нехудожествена</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="17" column="8">
-    <widget class="QPushButton" name="pushButton">
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="checkBoxTranslation">
      <property name="text">
-      <string>Запиши</string>
+      <string>Преводна</string>
      </property>
     </widget>
+   </item>
+   <item row="9" column="1" colspan="2">
+    <layout class="QFormLayout" name="formLayout_7">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditLanguage"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelLanguage">
+       <property name="text">
+        <string>Оригинален език:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="9" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_8">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditCountry"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelCountry">
+       <property name="text">
+        <string>Държава на първо издание:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="10" column="0" colspan="2">
     <layout class="QFormLayout" name="formLayout_17">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_17">
+      <widget class="QLabel" name="labelSpicy">
        <property name="text">
         <string>Пикантност:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_7">
+      <widget class="QComboBox" name="comboBoxSpicy">
        <item>
         <property name="text">
          <string>🌶️</string>
@@ -676,17 +492,126 @@ QLineEdit {
      </item>
     </layout>
    </item>
-   <item row="12" column="7">
+   <item row="10" column="2" colspan="2">
+    <layout class="QFormLayout" name="formLayout_18">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelTropes">
+       <property name="text">
+        <string>Тропи:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QTextEdit" name="textEditTropes"/>
+     </item>
+    </layout>
+   </item>
+   <item row="11" column="0" colspan="3">
+    <layout class="QFormLayout" name="formLayout_19">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelFantasyKind">
+       <property name="text">
+        <string>Вид фентъзи</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxFantasyKind">
+       <item>
+        <property name="text">
+         <string>Ърбан</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Приключенско</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Средновековно</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Стиймпънк</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Паранормална романтика</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="11" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_20">
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxMagicSystem">
+       <item>
+        <property name="text">
+         <string>Твърда</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Мека</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelMagicSystem">
+       <property name="text">
+        <string>Магическа система:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="12" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_21">
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxScifiKind">
+       <item>
+        <property name="text">
+         <string>Твърда</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Мека</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Дистопия</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelScifiKind">
+       <property name="text">
+        <string>Вид научна фантастика:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="12" column="3" colspan="2">
     <layout class="QFormLayout" name="formLayout_22">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_21">
+      <widget class="QLabel" name="labelFuture">
        <property name="text">
         <string>Бъдеще:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_11">
+      <widget class="QComboBox" name="comboBoxFuture">
        <item>
         <property name="text">
          <string>Настояще</string>
@@ -711,191 +636,280 @@ QLineEdit {
      </item>
     </layout>
    </item>
-   <item row="3" column="0" colspan="2">
-    <layout class="QFormLayout" name="formLayout_5">
+   <item row="13" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_23">
      <item row="0" column="0">
-      <widget class="QLabel" name="labelScore">
+      <widget class="QLabel" name="labelMystery">
        <property name="text">
-        <string>Оценка:</string>
+        <string>Мистерия:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_2">
+      <widget class="QComboBox" name="comboBoxMystery">
        <item>
         <property name="text">
-         <string>⭐</string>
+         <string>🔎</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐1/2</string>
+         <string>🔎1/2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐</string>
+         <string>🔎🔎</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐1/2</string>
+         <string>🔎🔎1/2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐⭐</string>
+         <string>🔎🔎🔎</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐⭐1/2</string>
+         <string>🔎🔎🔎1/2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐⭐⭐</string>
+         <string>🔎🔎🔎🔎</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐⭐⭐1/2</string>
+         <string>🔎🔎🔎🔎1/2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>⭐⭐⭐⭐⭐</string>
+         <string>🔎🔎🔎🔎🔎</string>
         </property>
        </item>
       </widget>
      </item>
     </layout>
    </item>
-   <item row="2" column="0" colspan="3">
-    <layout class="QFormLayout" name="formLayout_3">
+   <item row="14" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_24">
      <item row="0" column="0">
-      <widget class="QLabel" name="labelDateStarted">
+      <widget class="QLabel" name="labelScary">
        <property name="text">
-        <string>Дата започната:</string>
+        <string>Страшно:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QDateEdit" name="dateEdit"/>
-     </item>
-    </layout>
-   </item>
-   <item row="5" column="0" colspan="5">
-    <layout class="QFormLayout" name="formLayout_10">
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelPublished">
-       <property name="text">
-        <string>Дата на публикуване:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QDateEdit" name="dateEdit_3"/>
-     </item>
-    </layout>
-   </item>
-   <item row="10" column="3" colspan="5">
-    <layout class="QFormLayout" name="formLayout_18">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_18">
-       <property name="text">
-        <string>Тропи:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QTextEdit" name="textEdit_2"/>
-     </item>
-    </layout>
-   </item>
-   <item row="0" column="0" colspan="2">
-    <layout class="QFormLayout" name="formLayout_26">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_28">
-       <property name="text">
-        <string>Избери шаблон:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox"/>
-     </item>
-    </layout>
-   </item>
-   <item row="9" column="1" colspan="6">
-    <layout class="QFormLayout" name="formLayout_7">
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_5"/>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_14">
-       <property name="text">
-        <string>Оригинален език:</string>
-       </property>
+      <widget class="QComboBox" name="comboBoxScary">
+       <item>
+        <property name="text">
+         <string>😱</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱😱</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱😱1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱😱😱</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱😱😱1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>😱😱😱😱😱</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
    </item>
-   <item row="9" column="7">
-    <layout class="QFormLayout" name="formLayout_8">
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_6"/>
-     </item>
+   <item row="14" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_25">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_15">
+      <widget class="QLabel" name="labelDisgust">
        <property name="text">
-        <string>Държава на първо издание:</string>
+        <string>Противност:</string>
        </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBoxDisgust">
+       <item>
+        <property name="text">
+         <string>🤮</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮🤮</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮🤮1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮🤮🤮</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮🤮🤮1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>🤮🤮🤮🤮🤮</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
    </item>
-   <item row="5" column="7">
-    <layout class="QFormLayout" name="formLayout_11">
-     <item row="0" column="1">
-      <widget class="QDateEdit" name="dateEdit_4"/>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>Дата на бупликуване в България:</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="15" column="0" colspan="4">
+   <item row="15" column="0" colspan="2">
     <layout class="QFormLayout" name="formLayout_9">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_26">
+      <widget class="QLabel" name="labelEpoch">
        <property name="text">
         <string>Епоха</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_7"/>
+      <widget class="QLineEdit" name="lineEditEpoch"/>
      </item>
     </layout>
    </item>
-   <item row="1" column="2" colspan="6">
-    <layout class="QFormLayout" name="formLayout_2">
+   <item row="15" column="3" colspan="2">
+    <layout class="QFormLayout" name="formLayout_28">
      <item row="0" column="0">
-      <widget class="QLabel" name="labelAuthor">
+      <widget class="QLabel" name="labelCorrectness">
        <property name="text">
-        <string>Автор:</string>
+        <string>Историческа коректност:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QComboBox" name="comboBoxCorrectness">
+       <item>
+        <property name="text">
+         <string>📜</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜📜</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜📜1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜📜📜</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜📜📜1/2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>📜📜📜📜📜</string>
+        </property>
+       </item>
+      </widget>
      </item>
     </layout>
+   </item>
+   <item row="16" column="0" colspan="3">
+    <layout class="QFormLayout" name="formLayout_16">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelNotes">
+       <property name="text">
+        <string>Общи бележки</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QTextEdit" name="textEditNotes"/>
+     </item>
+    </layout>
+   </item>
+   <item row="17" column="5">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Запиши</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
