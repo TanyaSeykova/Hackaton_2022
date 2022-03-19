@@ -28,38 +28,30 @@ Books::Books(QWidget *parent) :
 
     QJsonArray books = readBooks();
     QStringList headers = {"Име", "Автор", "Оценка", "Започната на", "Приключена на", "Брой страници"};
-    QTableWidget *table = new QTableWidget(10, headers.size());
+    QTableWidget *table = new QTableWidget(books.size(), headers.size());
     ui->verticalLayout->addWidget(table);
     table->setHorizontalHeaderLabels(headers);
 
-    int row = 1;
-    for (int i = 0; i<10; i++ ) {
+    for (int i = 0; i<books.size(); i++ ) {
 
-        QTableWidgetItem *name = new QTableWidgetItem(books.at(i)["name"].toString());
-        qInfo()<<books.at(i).toString();
-        table->setItem(row, 1, name);
-
-
-        QTableWidgetItem *cover = new QTableWidgetItem(books.at(i)["cover"].toString());
-        table->setItem(row, 0, cover);
-
+        QTableWidgetItem *name = new QTableWidgetItem(books.at(i)["nameBook"].toString());
+        table->setItem(i, 0, name);
 
         QTableWidgetItem *author = new QTableWidgetItem(books.at(i)["author"].toString());
-        table->setItem(row, 2, author);
+        table->setItem(i, 1, author);
+
+        QTableWidgetItem *rating = new QTableWidgetItem(QString::number(books.at(i)["score"].toDouble()));
+        table->setItem(i, 2, rating);
+
+        QTableWidgetItem *started = new QTableWidgetItem(books.at(i)["dateStarted"].toString());
+        table->setItem(i, 3, started);
 
 
-        QTableWidgetItem *started = new QTableWidgetItem(books.at(i)["started"].toString());
-        table->setItem(row, 3, started);
+        QTableWidgetItem *finished = new QTableWidgetItem(books.at(i)["dateFinished"].toString());
+        table->setItem(i, 4, finished);
 
-
-        QTableWidgetItem *finished = new QTableWidgetItem(books.at(i)["finished"].toString());
-        table->setItem(row, 4, finished);
-
-
-        QTableWidgetItem *rating = new QTableWidgetItem(books.at(i)["rating"].toString());
-        table->setItem(row, 5, rating);
-
-        row++;
+        QTableWidgetItem *pages = new QTableWidgetItem(QString::number(books.at(i)["pages"].toInteger()));
+        table->setItem(i, 5, pages);
 
     }
 
