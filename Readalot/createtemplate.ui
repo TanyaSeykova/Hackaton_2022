@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1183</width>
-    <height>830</height>
+    <width>1101</width>
+    <height>635</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@ background-color: rgb(242, 238, 203)</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="lineEditNameTemplate">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
@@ -45,6 +45,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Основни</string>
      </property>
@@ -182,6 +185,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label_3">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Романтика</string>
      </property>
@@ -207,6 +213,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label_4">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Фентъзи</string>
      </property>
@@ -232,6 +241,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label_5">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Научна фантастика</string>
      </property>
@@ -257,6 +269,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label_6">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Мистерия</string>
      </property>
@@ -271,6 +286,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label_7">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Хорър</string>
      </property>
@@ -296,6 +314,9 @@ background-color: rgb(242, 238, 203)</string>
    </item>
    <item>
     <widget class="QLabel" name="label_8">
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
       <string>Исторически романи</string>
      </property>
@@ -304,14 +325,14 @@ background-color: rgb(242, 238, 203)</string>
    <item>
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="0" column="0">
-      <widget class="QCheckBox" name="checkBox_7">
+      <widget class="QCheckBox" name="checkBoxEpoch">
        <property name="text">
         <string>Епоха</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QCheckBox" name="checkBox_8">
+      <widget class="QCheckBox" name="checkBoxCorrectness">
        <property name="text">
         <string>Историческа коректност</string>
        </property>
