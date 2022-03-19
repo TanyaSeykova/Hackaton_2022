@@ -16,6 +16,8 @@ public:
     explicit Templates(QWidget *parent = nullptr);
     ~Templates();
 
+    void closeEvent(QCloseEvent *event);
+
 private slots:
     void on_pushButtonAddTemplate_clicked();
     void on_editTemplate();

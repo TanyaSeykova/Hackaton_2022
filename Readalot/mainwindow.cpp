@@ -10,14 +10,43 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //MainWindow w;
-    //w.showMaximized();
     this->resize(800,600);
-    this->showMaximized();
 
+    this->updateStatistics();
+    this->updateBarplot();
+    this->updatePiechart();
+    this->loadSideImages();
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+
+void MainWindow::on_pushButtonBooks_clicked()
+{
+    Books window;
+    connect(&window, SIGNAL(destroyed()), this, SLOT(refresh()));
+    window.setModal(true);
+    window.exec();
+}
+
+
+void MainWindow::on_pushButtonTemplates_clicked()
+{
+    Templates window;
+    connect(&window, SIGNAL(destroyed()), this, SLOT(refresh()));
+    window.setModal(true);
+    window.exec();
+}
+
+void MainWindow::updateStatistics()
+{
     QJsonArray bookArr = readBooks();
     int booksFinished = 0, pagesRead = 0, daysReadingBooks = 0;
-    QVector<int> booksByPages;
+
+    booksByPages.clear();
     booksByPages.push_back(0);
     booksByPages.push_back(0);
     booksByPages.push_back(0);
@@ -25,7 +54,9 @@ MainWindow::MainWindow(QWidget *parent)
     booksByPages.push_back(0);
     booksByPages.push_back(0);
     booksByPages.push_back(0);
-    QHash<QString,int> genres;
+
+    genres.clear();
+
     for(const auto &p : bookArr)
     {
         QJsonObject object = p.toObject();
@@ -94,8 +125,17 @@ MainWindow::MainWindow(QWidget *parent)
     {
         ui->bookLengthByTime->setText("0");
     }
+}
 
-    //==============books by pages bar chart start=============
+void MainWindow::refresh()
+{
+    this->updateStatistics();
+    this->updateBarplot();
+    this->updatePiechart();
+}
+
+void MainWindow::updateBarplot()
+{
     QBarSet *pagesBars = new QBarSet("Books Read");
     for(int i=0; i<7; i++)
     {
@@ -124,8 +164,10 @@ MainWindow::MainWindow(QWidget *parent)
     chart->legend()->setVisible(false);
 
     ui->chartBookPages->setChart(chart);
-    //==============books by pages bar chart end===============
-    //==============genres pie chart start===================
+}
+
+void MainWindow::updatePiechart()
+{
     QPieSeries *pieSeries = new QPieSeries();
     QHash<QString, int>::iterator i;
     for (i = genres.begin(); i != genres.end(); i++)
@@ -138,8 +180,10 @@ MainWindow::MainWindow(QWidget *parent)
     chartPie->setTitle("Разпределение на жанрове");
 
     ui->genrePieChart->setChart(chartPie);
-    //==============genres pie chart end=====================
+}
 
+void MainWindow::loadSideImages()
+{
     QImage imageLeft = QImage("../resources/left.png").scaled(ui->picLeft->width(), ui->picLeft->height(), Qt::KeepAspectRatio);
     QImage imageRight = QImage("../resources/right.png").scaled(ui->picRight->width(), ui->picRight->height(), Qt::KeepAspectRatio);
     ui->picLeft->setScaledContents(true);
@@ -147,25 +191,3 @@ MainWindow::MainWindow(QWidget *parent)
     ui->picRight->setScaledContents(true);
     ui->picRight->setPixmap(QPixmap::fromImage(imageRight));
 }
-
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
-
-void MainWindow::on_pushButtonBooks_clicked()
-{
-    Books window;
-    window.setModal(true);
-    window.exec();
-}
-
-
-void MainWindow::on_pushButtonTemplates_clicked()
-{
-    Templates window;
-    window.setModal(true);
-    window.exec();
-}
-
