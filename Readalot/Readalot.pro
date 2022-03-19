@@ -38,6 +38,10 @@ TRANSLATIONS += \
 CONFIG += lrelease
 CONFIG += embed_translations
 
+COPIES += copyFiles
+copyFiles.files = $$files(../json_files/*)
+copyFiles.path = $$OUT_PWD/json_files
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

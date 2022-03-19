@@ -79,10 +79,6 @@ void Books::on_tabWidget_currentChanged(int index)
 
 }
 
-void Books::on_pushButton_clicked()
-{
-
-}
 
 
 void Books::on_addBookButton_clicked()
