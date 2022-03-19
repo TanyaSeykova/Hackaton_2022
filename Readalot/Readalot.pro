@@ -42,6 +42,10 @@ COPIES += copyFiles
 copyFiles.files = $$files(../json_files/*)
 copyFiles.path = $$OUT_PWD/json_files
 
+COPIES += copyFilesR
+copyFilesR.files = $$files(../resources/*)
+copyFilesR.path = $$OUT_PWD/resources
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

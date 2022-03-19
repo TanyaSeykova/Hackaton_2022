@@ -2,6 +2,7 @@
 #define BOOKS_H
 
 #include <QDialog>
+#include <QTableWidget>
 
 namespace Ui {
 class Books;
@@ -16,12 +17,13 @@ public:
     ~Books();
 
 private slots:
-    void on_tabWidget_currentChanged(int index);
 
     void on_addBookButton_clicked();
 
+    void openBook(int row, int column);
 private:
     Ui::Books *ui;
+    QTableWidget *table;
 };
 
 #endif // BOOKS_H

@@ -1,5 +1,6 @@
 [
    {
+	  "nameTemplate" : "Основен",
       "nameBook":"Вещерът",
       "author":"Анджей Сапковски",
       "dateStarted":"1.2.2022",
@@ -8,6 +9,7 @@
       "pages":336
    },
    {
+	  "nameTemplate" : "Романтика",
       "nameBook":"Кеъф",
       "author":"Ксуфь",
       "dateStarted":"6.3.2022",

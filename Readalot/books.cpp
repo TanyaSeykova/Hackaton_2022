@@ -7,6 +7,7 @@
 #include <QJsonArray>
 #include <QFormLayout>
 #include <QTableWidget>
+#include <QThread>
 #include "utilities.h"
 #include "createbook.h"
 
@@ -27,8 +28,8 @@ Books::Books(QWidget *parent) :
     //ui->addBookButton->setIconSize(pixmap.rect().size());
 
     QJsonArray books = readBooks();
-    QStringList headers = {"Име", "Автор", "Оценка", "Започната на", "Приключена на", "Брой страници"};
-    QTableWidget *table = new QTableWidget(books.size(), headers.size());
+    QStringList headers = {"Име", "Автор", "Оценка", "Започната на", "Приключена на", "Брой страници", "Отиди на книга"};
+    table = new QTableWidget(books.size(), headers.size());
     ui->verticalLayout->addWidget(table);
     table->setHorizontalHeaderLabels(headers);
 
@@ -54,7 +55,7 @@ Books::Books(QWidget *parent) :
         table->setItem(i, 5, pages);
 
     }
-
+    connect(table,SIGNAL(cellClicked(int, int)),this,SLOT(openBook(int, int)));
 }
 
 
@@ -65,17 +66,19 @@ Books::~Books()
 }
 
 
-void Books::on_tabWidget_currentChanged(int index)
-{
-
-}
-
-
-
 void Books::on_addBookButton_clicked()
 {
     CreateBook window;
     window.setModal(true);
     window.exec();
+}
+
+void Books::openBook(int row, int column)
+{
+    if (column == 6){
+        CreateBook window(row);
+        window.setModal(true);
+        window.exec();
+    }
 }
 

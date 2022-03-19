@@ -12,7 +12,7 @@ class CreateBook : public QDialog
     Q_OBJECT
 
 public:
-    explicit CreateBook(QWidget *parent = nullptr);
+    explicit CreateBook(int indexClicked = -1, QWidget *parent = nullptr);
     ~CreateBook();
 
 private slots:
@@ -25,6 +25,9 @@ private:
     void hideMenus();
     void fillTemplates();
     void populateFromTemplate(QJsonValue currTemp);
+    void populateEdit();
+    void writeBookInformation();
+    int indexClicked;
 };
 
 #endif // CREATEBOOK_H
