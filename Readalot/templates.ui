@@ -11,10 +11,27 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Templates</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(242, 238, 203);</string>
+   <string notr="true">QDialog{
+	background-color: rgb(242, 238, 203);
+}
+QPushButton{
+	border-radius: 6px;
+	border-width: 2px;
+	background-color: rgb(119, 106, 166);
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font: 16pt &quot;Monotype Corsiva&quot;;
+	margin: 0 40px 0 40px;
+}
+QPushButton:hover{
+	background-color: rgb(212, 203, 242);
+	color: rgb(0,0,0);
+}</string>
   </property>
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
@@ -36,11 +53,10 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="4">
+    <item row="0" column="4" alignment="Qt::AlignHCenter">
      <widget class="QLabel" name="label">
       <property name="styleSheet">
        <string notr="true">font: 24pt &quot;Ruslan Display&quot;;
-qproperty-alignment: AlignCenter;
 height: 10%;</string>
       </property>
       <property name="text">

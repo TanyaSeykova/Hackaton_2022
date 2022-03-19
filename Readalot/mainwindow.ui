@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Readalot</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow{
@@ -131,7 +131,7 @@ QPushButton:hover{
          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="5,5">
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_5">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -140,47 +140,47 @@ QPushButton:hover{
                </sizepolicy>
               </property>
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Изчетени Книги: </string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_7">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Изчетени Страници: </string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_6">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Средно Изчетени Страници на ден: </string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_8">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Средна Дължина на Книга по страници:</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_9">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Средна Дължина на Книга по дни четене:</string>
