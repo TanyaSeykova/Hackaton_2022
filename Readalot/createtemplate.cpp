@@ -14,8 +14,9 @@ createTemplate::createTemplate(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::createTemplate)
 {
-    ui->setupUi(this);
-    setDefault();
+   ui->setupUi(this);
+   setDefault();
+   ui->pushButtonRemove->setVisible(false);
 }
 
 createTemplate::createTemplate(int index, QWidget *parent) : createTemplate(parent)
@@ -24,6 +25,7 @@ createTemplate::createTemplate(int index, QWidget *parent) : createTemplate(pare
     this->setTemplateVars();
     disconnect(ui->pushButtonSave,0,0,0);
     connect(ui->pushButtonSave,SIGNAL(clicked()),this,SLOT(on_editTemplate()));
+    ui->pushButtonRemove->setVisible(true);
 }
 
 createTemplate::~createTemplate()
@@ -109,14 +111,11 @@ void createTemplate::saveToFile()
 
     QTextStream out(&jsonFile);
     out << QJsonDocument(this->templates).toJson(QJsonDocument::Indented);
-    QMessageBox::warning(this, "Създаване на шаблон", "Успешно запазен шаблон!");
 }
 
 void createTemplate::setTemplateVars()
 {
     QJsonValue currentObj = this->templates.at(this->currentTemplateIndex);
-    ui->lineEditNameTemplate->setDisabled(true);
-
     ui->lineEditNameTemplate->setText(currentObj["name"].toString());
     ui->checkBoxName->setChecked(currentObj["nameBook"].toBool());
     ui->checkBoxAuthor->setChecked(currentObj["author"].toBool());
@@ -170,13 +169,37 @@ void createTemplate::on_pushButtonSave_clicked()
         this->templates[index] = currentObj;
 
     this->saveToFile();
+
+    QMessageBox::warning(this, "Създаване на шаблон", "Успешно запазен шаблон!");
 }
 
 void createTemplate::on_editTemplate()
 {
+    QString name = ui->lineEditNameTemplate->text();
+
+    if (name == "")
+    {
+        QMessageBox::warning(this, "Име на шаблона", "Името на шаблона трябва да не е празно.");
+        return;
+    }
+
     QJsonObject currentObj = getCurrentObject();
 
     this->templates[this->currentTemplateIndex] = currentObj;
 
     this->saveToFile();
+
+    QMessageBox::warning(this, "Редактиране на шаблон", "Успешно запазен шаблон!");
 }
+
+void createTemplate::on_pushButtonRemove_clicked()
+{
+    this->templates.removeAt(this->currentTemplateIndex);
+
+    this->saveToFile();
+
+    QMessageBox::warning(this, "Премахване на шаблон", "Шаблонът е премахнат успешно.");
+
+    this->close();
+}
+
