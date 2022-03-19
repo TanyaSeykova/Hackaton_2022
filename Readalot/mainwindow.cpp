@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->showMaximized();
 
     QBarSet *pagesBars = new QBarSet("Books Read");
     *pagesBars << 0 << 2 << 5 << 6 << 1 << 0 << 1;
