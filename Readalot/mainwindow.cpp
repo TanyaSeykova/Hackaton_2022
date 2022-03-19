@@ -139,12 +139,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->genrePieChart->setChart(chartPie);
     //==============genres pie chart end=====================
-    QPixmap imgLeft(QDir::currentPath() + "/resources/left.png");
-    QPixmap imgRight(QDir::currentPath() + "/resources/right.png");
-    //ui->picLeft->setPixmap(imgLeft);
-   // ui->picRight->setPixmap(imgRight);
 
-    this->showMaximized();
+    QImage imageLeft = QImage("../resources/left.png").scaled(ui->picLeft->width(), ui->picLeft->height(), Qt::KeepAspectRatio);
+    QImage imageRight = QImage("../resources/right.png").scaled(ui->picRight->width(), ui->picRight->height(), Qt::KeepAspectRatio);
+    ui->picLeft->setScaledContents(true);
+    ui->picLeft->setPixmap(QPixmap::fromImage(imageLeft));
+    ui->picRight->setScaledContents(true);
+    ui->picRight->setPixmap(QPixmap::fromImage(imageRight));
 }
 
 MainWindow::~MainWindow()
