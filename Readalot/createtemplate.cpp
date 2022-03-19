@@ -143,7 +143,7 @@ void createTemplate::on_editTemplate()
 
     this->saveToFile();
 
-    QMessageBox::warning(this, "Редактиране на шаблон", "Успешно запазен шаблон!");
+    QMessageBox::information(this, "Редактиране на шаблон", "Успешно запазен шаблон!");
 }
 
 void createTemplate::on_pushButtonRemove_clicked()
@@ -152,7 +152,7 @@ void createTemplate::on_pushButtonRemove_clicked()
 
     this->saveToFile();
 
-    QMessageBox::warning(this, "Премахване на шаблон", "Шаблонът е премахнат успешно.");
+    QMessageBox::information(this, "Премахване на шаблон", "Шаблонът е премахнат успешно.");
 
     this->close();
 }

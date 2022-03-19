@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Нова книга</string>
   </property>
   <property name="styleSheet">
    <string notr="true">
@@ -917,6 +917,13 @@ QLineEdit {
       <widget class="QTextEdit" name="textEditNotes"/>
      </item>
     </layout>
+   </item>
+   <item row="17" column="4">
+    <widget class="QPushButton" name="pushButtonDelete">
+     <property name="text">
+      <string>Изтрий</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

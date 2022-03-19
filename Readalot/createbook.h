@@ -2,6 +2,7 @@
 #define CREATEBOOK_H
 
 #include <QDialog>
+#include <QJsonArray>
 
 namespace Ui {
 class CreateBook;
@@ -20,13 +21,15 @@ private slots:
 
     void on_pushButtonSave_clicked();
 
+    void on_pushButtonDelete_clicked();
+
 private:
     Ui::CreateBook *ui;
     void hideMenus();
     void fillTemplates();
     void populateFromTemplate(QJsonValue currTemp);
     void populateEdit();
-    void writeBookInformation();
+    void writeBookInformation(QJsonObject book);
     int indexClicked;
 };
 

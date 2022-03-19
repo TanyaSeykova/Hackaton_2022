@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Templates</string>
+   <string>Шаблони</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog{
@@ -114,7 +114,7 @@ font: 48pt &quot;Niagara Engraved&quot;;</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>645</width>
+      <width>638</width>
       <height>299</height>
      </rect>
     </property>
