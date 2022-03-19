@@ -30,7 +30,7 @@ public:
     QLabel *labelTitle;
     QFormLayout *formLayout;
     QLabel *label_2;
-    QLineEdit *lineEdit;
+    QLineEdit *lineEditNameTemplate;
     QLabel *label;
     QGridLayout *gridLayout;
     QCheckBox *checkBoxDatePublished;
@@ -71,8 +71,8 @@ public:
     QCheckBox *checkBoxDisgust;
     QLabel *label_8;
     QGridLayout *gridLayout_6;
-    QCheckBox *checkBox_7;
-    QCheckBox *checkBox_8;
+    QCheckBox *checkBoxEpoch;
+    QCheckBox *checkBoxCorrectness;
     QGridLayout *gridLayout_7;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButtonSave;
@@ -81,7 +81,7 @@ public:
     {
         if (createTemplate->objectName().isEmpty())
             createTemplate->setObjectName(QString::fromUtf8("createTemplate"));
-        createTemplate->resize(1183, 830);
+        createTemplate->resize(1101, 635);
         createTemplate->setStyleSheet(QString::fromUtf8("\n"
 "background-color: rgb(242, 238, 203)"));
         verticalLayout = new QVBoxLayout(createTemplate);
@@ -98,17 +98,18 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label_2);
 
-        lineEdit = new QLineEdit(createTemplate);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lineEditNameTemplate = new QLineEdit(createTemplate);
+        lineEditNameTemplate->setObjectName(QString::fromUtf8("lineEditNameTemplate"));
+        lineEditNameTemplate->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, lineEdit);
+        formLayout->setWidget(0, QFormLayout::FieldRole, lineEditNameTemplate);
 
 
         verticalLayout->addLayout(formLayout);
 
         label = new QLabel(createTemplate);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label);
 
@@ -209,6 +210,7 @@ public:
 
         label_3 = new QLabel(createTemplate);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label_3);
 
@@ -229,6 +231,7 @@ public:
 
         label_4 = new QLabel(createTemplate);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label_4);
 
@@ -249,6 +252,7 @@ public:
 
         label_5 = new QLabel(createTemplate);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label_5);
 
@@ -269,6 +273,7 @@ public:
 
         label_6 = new QLabel(createTemplate);
         label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label_6);
 
@@ -279,6 +284,7 @@ public:
 
         label_7 = new QLabel(createTemplate);
         label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label_7);
 
@@ -299,20 +305,21 @@ public:
 
         label_8 = new QLabel(createTemplate);
         label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setStyleSheet(QString::fromUtf8("font: 11pt \"MS Shell Dlg 2\";"));
 
         verticalLayout->addWidget(label_8);
 
         gridLayout_6 = new QGridLayout();
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        checkBox_7 = new QCheckBox(createTemplate);
-        checkBox_7->setObjectName(QString::fromUtf8("checkBox_7"));
+        checkBoxEpoch = new QCheckBox(createTemplate);
+        checkBoxEpoch->setObjectName(QString::fromUtf8("checkBoxEpoch"));
 
-        gridLayout_6->addWidget(checkBox_7, 0, 0, 1, 1);
+        gridLayout_6->addWidget(checkBoxEpoch, 0, 0, 1, 1);
 
-        checkBox_8 = new QCheckBox(createTemplate);
-        checkBox_8->setObjectName(QString::fromUtf8("checkBox_8"));
+        checkBoxCorrectness = new QCheckBox(createTemplate);
+        checkBoxCorrectness->setObjectName(QString::fromUtf8("checkBoxCorrectness"));
 
-        gridLayout_6->addWidget(checkBox_8, 0, 1, 1, 1);
+        gridLayout_6->addWidget(checkBoxCorrectness, 0, 1, 1, 1);
 
 
         verticalLayout->addLayout(gridLayout_6);
@@ -376,8 +383,8 @@ public:
         checkBoxScariness->setText(QCoreApplication::translate("createTemplate", "\320\241\321\202\321\200\320\260\321\210\320\275\320\260", nullptr));
         checkBoxDisgust->setText(QCoreApplication::translate("createTemplate", "\320\237\321\200\320\276\321\202\320\270\320\262\320\275\320\276\321\201\321\202", nullptr));
         label_8->setText(QCoreApplication::translate("createTemplate", "\320\230\321\201\321\202\320\276\321\200\320\270\321\207\320\265\321\201\320\272\320\270 \321\200\320\276\320\274\320\260\320\275\320\270", nullptr));
-        checkBox_7->setText(QCoreApplication::translate("createTemplate", "\320\225\320\277\320\276\321\205\320\260", nullptr));
-        checkBox_8->setText(QCoreApplication::translate("createTemplate", "\320\230\321\201\321\202\320\276\321\200\320\270\321\207\320\265\321\201\320\272\320\260 \320\272\320\276\321\200\320\265\320\272\321\202\320\275\320\276\321\201\321\202", nullptr));
+        checkBoxEpoch->setText(QCoreApplication::translate("createTemplate", "\320\225\320\277\320\276\321\205\320\260", nullptr));
+        checkBoxCorrectness->setText(QCoreApplication::translate("createTemplate", "\320\230\321\201\321\202\320\276\321\200\320\270\321\207\320\265\321\201\320\272\320\260 \320\272\320\276\321\200\320\265\320\272\321\202\320\275\320\276\321\201\321\202", nullptr));
         pushButtonSave->setText(QCoreApplication::translate("createTemplate", "\320\227\320\260\320\277\320\270\321\210\320\270", nullptr));
     } // retranslateUi
 

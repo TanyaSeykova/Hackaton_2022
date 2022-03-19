@@ -6,8 +6,9 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QFormLayout>
+#include "utilities.h"
 
-QJsonArray readBooks() {
+/*QJsonArray readBooks() {
     QFile jsonFile(QDir::currentPath() + "/json_files/books.json");
     if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
             return QJsonArray();
@@ -19,7 +20,7 @@ QJsonArray readBooks() {
     return doc.array();
 
 
-}
+}*/
 
 
 Books::Books(QWidget *parent) :

@@ -1,4 +1,5 @@
 debug/books.o
+debug/createbook.o
 debug/createtemplate.o
 debug/main.o
 debug/mainwindow.o
@@ -6,6 +7,7 @@ debug/templates.o
 debug/utilities.o
 debug/qrc_qmake_qmake_qm_files.o
 debug/moc_books.o
+debug/moc_createbook.o
 debug/moc_createtemplate.o
 debug/moc_mainwindow.o
 debug/moc_templates.o
