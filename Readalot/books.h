@@ -15,6 +15,11 @@ public:
     explicit Books(QWidget *parent = nullptr);
     ~Books();
 
+private slots:
+    void on_tabWidget_currentChanged(int index);
+
+    void on_pushButton_clicked();
+
 private:
     Ui::Books *ui;
 };
