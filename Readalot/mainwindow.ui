@@ -245,7 +245,7 @@ QPushButton:hover{
              </widget>
             </item>
             <item>
-             <widget class="QChartView" name="graphicsView"/>
+             <widget class="QChartView" name="genrePieChart"/>
             </item>
            </layout>
           </item>

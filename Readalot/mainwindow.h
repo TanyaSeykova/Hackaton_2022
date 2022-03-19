@@ -9,8 +9,11 @@
 #include <QtCharts/QChartView>
 #include <QtCharts/QBarCategoryAxis>
 #include <QtCharts/QValueAxis>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QPieSlice>
 #include <QJsonObject>
 #include <vector>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
