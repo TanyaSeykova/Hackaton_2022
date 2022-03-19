@@ -1,0 +1,11 @@
+release/books.o
+release/createtemplate.o
+release/main.o
+release/mainwindow.o
+release/templates.o
+release/utilities.o
+release/qrc_qmake_qmake_qm_files.o
+release/moc_books.o
+release/moc_createtemplate.o
+release/moc_mainwindow.o
+release/moc_templates.o

@@ -7,6 +7,8 @@
 #include <QtCharts/QBarSeries>
 #include <QtCharts/QChart>
 #include <QtCharts/QChartView>
+#include <QtCharts/QBarCategoryAxis>
+#include <QtCharts/QValueAxis>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
