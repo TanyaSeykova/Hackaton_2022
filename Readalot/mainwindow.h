@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "utilities.h"
+#include <QtCharts/QBarSet>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QChart>
+#include <QtCharts/QChartView>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
