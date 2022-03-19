@@ -3,6 +3,8 @@
 
 #include "createtemplate.h"
 #include <QJsonArray>
+#include <QDir>
+#include <QGroupBox>
 
 Templates::Templates(QWidget *parent) :
     QDialog(parent),
@@ -10,6 +12,7 @@ Templates::Templates(QWidget *parent) :
 {
     ui->setupUi(this);
     populateTemplates();
+    ui->titleLabel->setAlignment(Qt::AlignCenter);
 }
 
 Templates::~Templates()
@@ -23,12 +26,14 @@ void Templates::populateTemplates()
 
     for(int i = 0; i < templates.size(); i++){
         QPushButton* templateButton = new QPushButton(templates.at(i)["name"].toString());
-        connect(templateButton,SIGNAL(clicked()),this,SLOT(on_editTemplate()));
-        ui->templatesLayout->addWidget(templateButton);
+        templateButton->setStyleSheet("QPushButton { background: #c3c3c3; border: 2px solid black; margin: 10px; } QPushButton:hover {background: #884422; color: #c3c3c3} ");
+        templateButton->setMinimumHeight(50);
+        connect(templateButton, SIGNAL(clicked()), this, SLOT(on_editTemplate()));
+        ui->templatesList->addWidget(templateButton);
     }
 }
 
-void Templates::on_pushButtonAddTemplates_clicked()
+void Templates::on_pushButtonAddTemplate_clicked()
 {
     createTemplate window;
     window.setModal(true);

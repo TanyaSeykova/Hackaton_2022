@@ -17,7 +17,7 @@ public:
     ~Templates();
 
 private slots:
-    void on_pushButtonAddTemplates_clicked();
+    void on_pushButtonAddTemplate_clicked();
     void on_editTemplate();
 
 private:
