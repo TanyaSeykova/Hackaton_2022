@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 debug/books.o
 debug/createbook.o
 debug/createtemplate.o
@@ -9,5 +10,15 @@ debug/qrc_qmake_qmake_qm_files.o
 debug/moc_books.o
 debug/moc_createbook.o
 debug/moc_createtemplate.o
+=======
+debug/book.o
+debug/books.o
+debug/main.o
+debug/mainwindow.o
+debug/templates.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_book.o
+debug/moc_books.o
+>>>>>>> Stashed changes
 debug/moc_mainwindow.o
 debug/moc_templates.o

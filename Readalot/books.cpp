@@ -5,14 +5,26 @@
 #include <QDir>
 #include <QJsonDocument>
 #include <QJsonArray>
+<<<<<<< Updated upstream
 #include <QFormLayout>
 #include "utilities.h"
 
 /*QJsonArray readBooks() {
     QFile jsonFile(QDir::currentPath() + "/json_files/books.json");
     if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
-            return QJsonArray();
+=======
+#include <QTableWidgetItem>
+#include "book.h"
+#include <QtDebug>
+#include <QIODevice>
 
+QJsonArray readBooks() {
+    QFile jsonFile(QDir::currentPath() + "/books.json");
+    if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)){
+        qInfo()<<"json is not open";
+>>>>>>> Stashed changes
+            return QJsonArray();
+}
     QTextStream in(&jsonFile);
     QString result = in.readAll();
 
@@ -35,43 +47,44 @@ Books::Books(QWidget *parent) :
     //ui->addBookButton->setIconSize(pixmap.rect().size());
 
     QJsonArray books = readBooks();
-QVBoxLayout *booksLayout = new QVBoxLayout[10];
-    for(int i = 0; i<10; i++){
-//    QWidget *name = new QLabel(books.at(i)["name"].toString());
-//    QWidget *cover = new QLabel(books.at(i)["cover"].toString());
-//    QWidget *author = new QLabel(books.at(i)["author"].toString());
-//    QWidget *started = new QLabel(books.at(i)["started"].toString());
-//    QWidget *finished = new QLabel(books.at(i)["finished"].toString());
 
-    QLabel *tryng = new QLabel("try");
-
-    //QLabel *trying = new QLabel("try2");
+    QTableWidget *table = new QTableWidget(10,10);
+    ui->verticalLayout->addWidget(table);
+    QStringList headers = {"Name","Author", "Cover", "Rating", "Started", "Finished"};
+    table->setHorizontalHeaderLabels(headers);
 
 
-    //QVBoxLayout *booksLayout = new QVBoxLayout();
-    booksLayout->addWidget(tryng, i);
-    //booksLayout->addWidget(trying);
 
-    ui->ListBooks->setLayout(booksLayout);
-    //this->setLayout(booksLayout);
+    int row = 1;
+    for (int i = 0; i<10; i++ ) {
 
-
-    //ui->verticalLayout->addWidget(tryng);//doesnt work with cycle
-    //ui->verticalLayout->addWidget(trying);
+        QTableWidgetItem *name = new QTableWidgetItem(books.at(i)["name"].toString());
+        qInfo()<<books.at(i).toString();
+        table->setItem(row, 1, name);
 
 
-//    ui->verticalLayout->addWidget(name);
+        QTableWidgetItem *cover = new QTableWidgetItem(books.at(i)["cover"].toString());
+        table->setItem(row, 0, cover);
 
-//    ui->verticalLayout->addWidget(cover);
 
-//    ui->verticalLayout->addWidget(author);
+        QTableWidgetItem *author = new QTableWidgetItem(books.at(i)["author"].toString());
+        table->setItem(row, 2, author);
 
-//    ui->verticalLayout->addWidget(started);
 
-//    ui->verticalLayout->addWidget(finished);
+        QTableWidgetItem *started = new QTableWidgetItem(books.at(i)["started"].toString());
+        table->setItem(row, 3, started);
+
+
+        QTableWidgetItem *finished = new QTableWidgetItem(books.at(i)["finished"].toString());
+        table->setItem(row, 4, finished);
+
+
+        QTableWidgetItem *rating = new QTableWidgetItem(books.at(i)["rating"].toString());
+        table->setItem(row, 5, rating);
+
+        row++;
 
     }
-    ////ui->verticalLayout->setLayout(booksLayout);
 
 }
 
@@ -91,5 +104,13 @@ void Books::on_tabWidget_currentChanged(int index)
 void Books::on_pushButton_clicked()
 {
 
+}
+
+
+void Books::on_addBookButton_clicked()
+{
+    Book bk;
+    bk.setModal(true);
+    bk.exec();
 }
 

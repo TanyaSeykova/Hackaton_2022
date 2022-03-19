@@ -1,0 +1,20 @@
+[
+   {
+      "nameBook":"Вещерът",
+      "author":"Анджей Сапковски",
+      "dateStarted":"1.2.2022",
+      "dateFinished":"10.2.2022",
+      "score":4.5,
+      "pages":336
+   },
+   {
+      "nameBook":"Кеъф",
+      "author":"Ксуфь",
+      "dateStarted":"6.3.2022",
+      "dateFinished":"16.3.2022",
+      "score":3,
+      "pages":212,
+      "spicy":2.5,
+      "tropes":"enemies-to-lovers, forced proximity"
+   }
+]
