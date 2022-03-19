@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Readalot</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow{
@@ -25,10 +25,16 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,25,5">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="picLeft">
         <property name="text">
-         <string>TextLabel</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -131,7 +137,7 @@ QPushButton:hover{
          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="5,5">
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_5">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -140,47 +146,47 @@ QPushButton:hover{
                </sizepolicy>
               </property>
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Изчетени Книги: </string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_7">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Изчетени Страници: </string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_6">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Средно Изчетени Страници на ден: </string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_8">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Средна Дължина на Книга по страници:</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignRight">
              <widget class="QLabel" name="label_9">
               <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
+               <string notr="true">margin-right: 7.5px;</string>
               </property>
               <property name="text">
                <string>Средна Дължина на Книга по дни четене:</string>
@@ -245,7 +251,7 @@ QPushButton:hover{
              </widget>
             </item>
             <item>
-             <widget class="QChartView" name="graphicsView"/>
+             <widget class="QChartView" name="genrePieChart"/>
             </item>
            </layout>
           </item>
@@ -254,9 +260,9 @@ QPushButton:hover{
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="picRight">
         <property name="text">
-         <string>TextLabel</string>
+         <string/>
         </property>
        </widget>
       </item>

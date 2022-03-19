@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //MainWindow w;
+    //w.showMaximized();
     this->showMaximized();
 
     QJsonArray bookArr = readBooks();
@@ -22,43 +24,46 @@ MainWindow::MainWindow(QWidget *parent)
     booksByPages.push_back(0);
     booksByPages.push_back(0);
     booksByPages.push_back(0);
+    QHash<QString,int> genres;
     for(const auto &p : bookArr)
     {
         QJsonObject object = p.toObject();
-        if(object.value("dateFinished")!=NULL)
+        int pages = object.value("pages").toInt();
+        pagesRead += pages;
+        booksFinished++;
+        QDate startDate = QDate::fromString(object.value("dateStarted").toString(),"d.M.yyyy");
+        QDate finishDate = QDate::fromString(object.value("dateFinished").toString(),"d.M.yyyy");
+        daysReadingBooks += startDate.daysTo(finishDate);
+
+        if(pages<100) {booksByPages[0]++;}
+        else if(pages<101) {booksByPages[1]++;}
+        else if(pages<201) {booksByPages[2]++;}
+        else if(pages<301) {booksByPages[3]++;}
+        else if(pages<401) {booksByPages[4]++;}
+        else if(pages<501) {booksByPages[5]++;}
+        else {booksByPages[6]++;}
+
+        if(object.contains("genre"))
         {
-            pagesRead += object.value("pages").toInt();
-            booksFinished++;
-            QDate startDate = QDate::fromString(object.value("dateStarted").toString(),"d.M.yyyy");
-            QDate finishDate = QDate::fromString(object.value("dateFinished").toString(),"d.M.yyyy");
-            daysReadingBooks += startDate.daysTo(finishDate);
-            if(object.value("pages").toInt()<100)
+            QString tempGenre = object.value("genre").toString();
+            if(genres.contains(tempGenre))
             {
-                booksByPages[0]++;
-            }
-            else if(object.value("pages").toInt()<101)
-            {
-                booksByPages[1]++;
-            }
-            else if(object.value("pages").toInt()<201)
-            {
-                booksByPages[2]++;
-            }
-            else if(object.value("pages").toInt()<301)
-            {
-                booksByPages[3]++;
-            }
-            else if(object.value("pages").toInt()<401)
-            {
-                booksByPages[4]++;
-            }
-            else if(object.value("pages").toInt()<501)
-            {
-                booksByPages[5]++;
+                genres[tempGenre]++;
             }
             else
             {
-                booksByPages[6]++;
+                genres[tempGenre] = 1;
+            }
+        }
+        else
+        {
+            if(genres.contains("Без Жанр"))
+            {
+                genres["Без Жанр"]++;
+            }
+            else
+            {
+                genres["Без Жанр"] = 1;
             }
         }
     }
@@ -89,7 +94,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->bookLengthByTime->setText("0");
     }
 
-    //==============bar chart start=============
+    //==============books by pages bar chart start=============
     QBarSet *pagesBars = new QBarSet("Books Read");
     for(int i=0; i<7; i++)
     {
@@ -118,7 +123,25 @@ MainWindow::MainWindow(QWidget *parent)
     chart->legend()->setVisible(false);
 
     ui->chartBookPages->setChart(chart);
-    //==============bar chart end=============
+    //==============books by pages bar chart end===============
+    //==============genres pie chart start===================
+    QPieSeries *pieSeries = new QPieSeries();
+    QHash<QString, int>::iterator i;
+    for (i = genres.begin(); i != genres.end(); i++)
+    {
+        pieSeries->append(i.key(), i.value());
+    }
+
+    QChart *chartPie = new QChart();
+    chartPie->addSeries(pieSeries);
+    chartPie->setTitle("Разпределение на жанрове");
+
+    ui->genrePieChart->setChart(chartPie);
+    //==============genres pie chart end=====================
+    QPixmap imgLeft(QDir::currentPath() + "/resources/left.png");
+    QPixmap imgRight(QDir::currentPath() + "/resources/right.png");
+    ui->picLeft->setPixmap(imgLeft);
+    ui->picRight->setPixmap(imgRight);
 }
 
 MainWindow::~MainWindow()

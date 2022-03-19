@@ -11,17 +11,53 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>EditTemplate</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-background-color: rgb(242, 238, 203)</string>
+   <string notr="true">QDialog{
+	background-color: rgb(242, 238, 203)
+}
+Line{
+	border: 8px solid #776AA6;
+	border-radius: 2px;
+}
+QPushButton{
+	border-radius: 6px;
+	border-width: 2px;
+	background-color: rgb(119, 106, 166);
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font: 14pt &quot;Monotype Corsiva&quot;;
+	margin: 0 20px 0 20px;
+}
+QPushButton:hover{
+	background-color: rgb(212, 203, 242);
+	color: rgb(0,0,0);
+}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="labelTitle">
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Създай шаблон&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_7">
+     <property name="maximumSize">
+      <size>
+       <width>1083</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">width:50%;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
@@ -184,6 +220,13 @@ background-color: rgb(242, 238, 203)</string>
     </layout>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_3">
      <property name="styleSheet">
       <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
@@ -210,6 +253,13 @@ background-color: rgb(242, 238, 203)</string>
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_4">
@@ -240,6 +290,13 @@ background-color: rgb(242, 238, 203)</string>
     </layout>
    </item>
    <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_5">
      <property name="styleSheet">
       <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
@@ -268,6 +325,13 @@ background-color: rgb(242, 238, 203)</string>
     </layout>
    </item>
    <item>
+    <widget class="Line" name="line_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_6">
      <property name="styleSheet">
       <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
@@ -281,6 +345,13 @@ background-color: rgb(242, 238, 203)</string>
     <widget class="QCheckBox" name="checkBoxMystery">
      <property name="text">
       <string>Мистерия</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
@@ -311,6 +382,13 @@ background-color: rgb(242, 238, 203)</string>
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_8">
