@@ -5,34 +5,12 @@
 #include <QDir>
 #include <QJsonDocument>
 #include <QJsonArray>
-<<<<<<< Updated upstream
 #include <QFormLayout>
+#include <QTableWidget>
 #include "utilities.h"
-
-/*QJsonArray readBooks() {
-    QFile jsonFile(QDir::currentPath() + "/json_files/books.json");
-    if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
-=======
-#include <QTableWidgetItem>
-#include "book.h"
-#include <QtDebug>
-#include <QIODevice>
-
-QJsonArray readBooks() {
-    QFile jsonFile(QDir::currentPath() + "/books.json");
-    if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)){
-        qInfo()<<"json is not open";
->>>>>>> Stashed changes
-            return QJsonArray();
-}
-    QTextStream in(&jsonFile);
-    QString result = in.readAll();
-
-    QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
-    return doc.array();
+#include "createbook.h"
 
 
-}*/
 
 
 Books::Books(QWidget *parent) :
@@ -109,7 +87,7 @@ void Books::on_pushButton_clicked()
 
 void Books::on_addBookButton_clicked()
 {
-    Book bk;
+    CreateBook bk;
     bk.setModal(true);
     bk.exec();
 }
