@@ -890,7 +890,21 @@ QLineEdit {
      </item>
     </layout>
    </item>
-   <item row="16" column="0" colspan="3">
+   <item row="17" column="5">
+    <widget class="QPushButton" name="pushButtonSave">
+     <property name="text">
+      <string>Запиши</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="pushButtonLoad">
+     <property name="text">
+      <string>Зареди</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0" colspan="5">
     <layout class="QFormLayout" name="formLayout_16">
      <item row="0" column="0">
       <widget class="QLabel" name="labelNotes">
@@ -903,13 +917,6 @@ QLineEdit {
       <widget class="QTextEdit" name="textEditNotes"/>
      </item>
     </layout>
-   </item>
-   <item row="17" column="5">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Запиши</string>
-     </property>
-    </widget>
    </item>
   </layout>
  </widget>

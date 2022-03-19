@@ -6,6 +6,7 @@ CreateBook::CreateBook(QWidget *parent) :
     ui(new Ui::CreateBook)
 {
     ui->setupUi(this);
+    this->showMaximized();
 }
 
 CreateBook::~CreateBook()

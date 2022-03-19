@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->showMaximized();
 
     QJsonArray bookArr = readBooks();
     int booksFinished = 0, pagesRead = 0, daysReadingBooks = 0;

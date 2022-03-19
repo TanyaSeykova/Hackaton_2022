@@ -19,19 +19,18 @@ Books::Books(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    this->showMaximized();
+
     QPixmap pixmap("button.png");
     QIcon ButtonIcon(pixmap);
     ui->addBookButton->setIcon(ButtonIcon);
     //ui->addBookButton->setIconSize(pixmap.rect().size());
 
     QJsonArray books = readBooks();
-
-    QTableWidget *table = new QTableWidget(10,10);
+    QStringList headers = {"Име", "Автор", "Оценка", "Започната на", "Приключена на", "Брой страници"};
+    QTableWidget *table = new QTableWidget(10, headers.size());
     ui->verticalLayout->addWidget(table);
-    QStringList headers = {"Name","Author", "Cover", "Rating", "Started", "Finished"};
     table->setHorizontalHeaderLabels(headers);
-
-
 
     int row = 1;
     for (int i = 0; i<10; i++ ) {
@@ -83,8 +82,8 @@ void Books::on_tabWidget_currentChanged(int index)
 
 void Books::on_addBookButton_clicked()
 {
-    CreateBook bk;
-    bk.setModal(true);
-    bk.exec();
+    CreateBook window;
+    window.setModal(true);
+    window.exec();
 }
 
