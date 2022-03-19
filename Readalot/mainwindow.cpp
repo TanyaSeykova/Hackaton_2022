@@ -11,39 +11,30 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QBarSet *less100 = new QBarSet("1-100");
-    QBarSet *less200 = new QBarSet("101-200");
-    QBarSet *less300 = new QBarSet("201-300");
-    QBarSet *less400 = new QBarSet("301-400");
-    QBarSet *less500 = new QBarSet("401-500");
-    QBarSet *less600 = new QBarSet("501-600");
-    QBarSet *more600 = new QBarSet(">600");
-
-    *less100 << 0;
-    *less200 << 2;
-    *less300 << 5;
-    *less400 << 6;
-    *less500 << 1;
-    *less600 << 0;
-    *more600 << 1;
-
+    QBarSet *pagesBars = new QBarSet("Books Read");
+    *pagesBars << 0 << 2 << 5 << 6 << 1 << 0 << 1;
     QBarSeries *series = new QBarSeries();
-    series->append(less100);
-    series->append(less200);
-    series->append(less300);
-    series->append(less400);
-    series->append(less500);
-    series->append(less600);
-    series->append(more600);
+    series->append(pagesBars);
+
+    QStringList categories;
+    categories << "1-100" << "101-200" << "201-300" << "301-400" << "401-500" << "501-600" << "600+";
+    QBarCategoryAxis *axisX = new QBarCategoryAxis();
+    axisX->append(categories);
+
+
+    QValueAxis *axisY = new QValueAxis();
+    axisY->setRange(0,10);
+
 
     QChart *chart = new QChart();
     chart->addSeries(series);
+    chart->addAxis(axisX, Qt::AlignBottom);
+    series->attachAxis(axisX);
+    chart->addAxis(axisY, Qt::AlignLeft);
+    series->attachAxis(axisY);
     chart->setTitle("Брой книги по страници");
-    chart->legend()->setVisible(true);
-    chart->legend()->setAlignment(Qt::AlignBottom);
 
     ui->chartBookPages->setChart(chart);
-    ui->chartBookPages->setFixedWidth(250);
 }
 
 MainWindow::~MainWindow()
