@@ -10,17 +10,22 @@ CONFIG += c++11
 
 SOURCES += \
     books.cpp \
+    createtemplate.cpp \
     main.cpp \
     mainwindow.cpp \
-    templates.cpp
+    templates.cpp \
+    utilities.cpp
 
 HEADERS += \
     books.h \
+    createtemplate.h \
     mainwindow.h \
-    templates.h
+    templates.h \
+    utilities.h
 
 FORMS += \
     books.ui \
+    createtemplate.ui \
     mainwindow.ui \
     templates.ui
 

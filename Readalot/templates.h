@@ -2,6 +2,7 @@
 #define TEMPLATES_H
 
 #include <QDialog>
+#include "utilities.h"
 
 namespace Ui {
 class Templates;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Templates *ui;
+    void populateTemplates();
 };
 
 #endif // TEMPLATES_H

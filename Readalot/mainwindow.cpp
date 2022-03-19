@@ -3,6 +3,8 @@
 #include "books.h"
 #include "templates.h"
 
+#include <QJsonArray>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
