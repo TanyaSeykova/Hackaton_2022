@@ -188,16 +188,6 @@ QPushButton:hover{
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_11">
-              <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
-              </property>
-              <property name="text">
-               <string>Довършени Книги:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QChartView" name="chartBookPages"/>
             </item>
            </layout>
@@ -251,16 +241,6 @@ QPushButton:hover{
               </property>
               <property name="text">
                <string>#</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="bookFinishedPerc">
-              <property name="styleSheet">
-               <string notr="true">margin-left: 7.5px;</string>
-              </property>
-              <property name="text">
-               <string>%</string>
               </property>
              </widget>
             </item>
