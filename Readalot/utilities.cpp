@@ -28,3 +28,13 @@ QJsonArray readBooks()
     return doc.array();
 }
 
+
+void saveToFile(QJsonArray data, QString filename)
+{
+    QFile jsonFile(QDir::currentPath() + "/json_files/" + filename);
+    if (!jsonFile.open(QIODevice::WriteOnly | QIODevice::Text)) return;
+
+    QTextStream out(&jsonFile);
+    out << QJsonDocument(data).toJson(QJsonDocument::Indented);
+}
+
