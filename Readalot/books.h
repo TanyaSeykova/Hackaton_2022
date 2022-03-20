@@ -31,6 +31,7 @@ private:
     QTableWidget *table;
     QJsonArray books;
     void loadTable();
+    QString getRating(int score);
 };
 
 #endif // BOOKS_H

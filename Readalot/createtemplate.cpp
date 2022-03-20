@@ -36,8 +36,8 @@ createTemplate::~createTemplate()
 
 void createTemplate::setDefault()
 {
-    ui->checkBoxName->setChecked(true);
-    ui->checkBoxName->setEnabled(false);
+    ui->checkBoxNameBook->setChecked(true);
+    ui->checkBoxNameBook->setEnabled(false);
     ui->checkBoxAuthor->setChecked(true);
     ui->checkBoxAuthor->setEnabled(false);
     ui->checkBoxScore->setChecked(true);
@@ -57,7 +57,8 @@ QJsonObject createTemplate::getCurrentObject()
     QList<QCheckBox*> checkboxes = this->findChildren<QCheckBox*>(QRegularExpression(".*"));
     for (auto it = checkboxes.begin(); it != checkboxes.end(); it++)
     {
-        currentObj.insert((*it)->objectName().remove(0, 8).toLower(), (*it)->isChecked());
+        QString var = (*it)->objectName().remove(0, 8);
+        currentObj.insert(var[0].toLower() + var.sliced(1), (*it)->isChecked());
     }
 
     currentObj.insert("name", ui->lineEditNameTemplate->text());
@@ -89,10 +90,12 @@ void createTemplate::setTemplateVars()
     QList<QCheckBox*> checkboxes = this->findChildren<QCheckBox*>(QRegularExpression(".*"));
     for (auto it = checkboxes.begin(); it != checkboxes.end(); it++)
     {
-        (*it)->setChecked(currentObj[(*it)->objectName().remove(0, 8).toLower()].toBool());
+        QString var = (*it)->objectName().remove(0, 8);
+        (*it)->setChecked(currentObj[var[0].toLower() + var.sliced(1)].toBool());
     }
 
-    ui->lineEditNameTemplate->setText(currentObj["name"].toString());}
+    ui->lineEditNameTemplate->setText(currentObj["name"].toString());
+}
 
 void createTemplate::on_pushButtonSave_clicked()
 {
@@ -140,6 +143,12 @@ void createTemplate::on_editTemplate()
 
 void createTemplate::on_pushButtonRemove_clicked()
 {
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Премахване на шаблон", "Наистина ли искате да изтриете шаблона?",
+                                    QMessageBox::Yes|QMessageBox::No);
+
+    if(reply == QMessageBox::No) return;
+
     this->templates.removeAt(this->currentTemplateIndex);
 
     saveToFile(this->templates, "templates.json");

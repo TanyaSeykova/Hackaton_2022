@@ -403,7 +403,7 @@ void CreateBook::writeBookInformation(QJsonObject book)
 QDate CreateBook::getDateFromString(QString dateStr)
 {
     QStringList list = dateStr.split(".");
-    return QDate(list[2].toInt(), list[1].toInt(), list[0].toInt());
+    return QDate(list[2].left(4).toInt(), list[1].toInt(), list[0].toInt());
 }
 
 void CreateBook::on_pushButtonLoad_clicked()
