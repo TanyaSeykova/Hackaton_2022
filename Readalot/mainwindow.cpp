@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->resize(800,600);
+    this->showMaximized();
 
     this->updateStatistics();
     this->updateBarplot();
@@ -43,6 +43,24 @@ void MainWindow::on_pushButtonTemplates_clicked()
 
 void MainWindow::updateStatistics()
 {
+    const std::initializer_list<std::pair<int, QString>> PAIRS {
+        std::pair<int, QString>(0, "Обща художествена литература"),
+        std::pair<int, QString>(1, "Научна фантастика"),
+        std::pair<int, QString>(2, "Фентъзи"),
+        std::pair<int, QString>(3, "Романтика"),
+        std::pair<int, QString>(4, "Историческа"),
+        std::pair<int, QString>(5, "Мистерия/Криминална"),
+        std::pair<int, QString>(6, "Хорър"),
+        std::pair<int, QString>(7, "Класика"),
+        std::pair<int, QString>(8, "Обща нехудожествена литература"),
+        std::pair<int, QString>(9, "Мемоар/Биография"),
+        std::pair<int, QString>(10, "Пътувания/Храна"),
+        std::pair<int, QString>(11, "Природа/Наука"),
+        std::pair<int, QString>(12, "Настоящи събития/Политика"),
+        std::pair<int, QString>(13, "Бизнес/Самопомощ")
+    };
+    const QHash GENRES (PAIRS);
+
     QJsonArray bookArr = readBooks();
     int booksFinished = 0, pagesRead = 0, daysReadingBooks = 0;
 
@@ -77,14 +95,14 @@ void MainWindow::updateStatistics()
 
         if(object.contains("genre"))
         {
-            QString tempGenre = object.value("genre").toString();
-            if(genres.contains(tempGenre))
+            QString genre = GENRES[object.value("genre").toInt()];
+            if(genres.contains(genre))
             {
-                genres[tempGenre]++;
+                genres[genre]++;
             }
             else
             {
-                genres[tempGenre] = 1;
+                genres[genre] = 1;
             }
         }
         else
