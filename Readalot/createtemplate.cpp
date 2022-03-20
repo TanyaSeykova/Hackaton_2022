@@ -159,6 +159,11 @@ void createTemplate::on_pushButtonRemove_clicked()
     this->close();
 }
 
+void createTemplate::on_pushButtonBack_clicked()
+{
+    this->close();
+}
+
 void createTemplate::closeEvent(QCloseEvent *event)
 {
     Templates window;

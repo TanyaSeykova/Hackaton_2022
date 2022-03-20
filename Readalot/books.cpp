@@ -116,3 +116,9 @@ void Books::on_pushButtonReload_clicked()
     loadTable();
 }
 
+
+void Books::on_pushButtonBack_clicked()
+{
+    this->close();
+}
+

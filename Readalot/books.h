@@ -24,6 +24,8 @@ private slots:
     void openBook(int row, int column);
     void on_pushButtonReload_clicked();
 
+    void on_pushButtonBack_clicked();
+
 private:
     Ui::Books *ui;
     QTableWidget *table;
