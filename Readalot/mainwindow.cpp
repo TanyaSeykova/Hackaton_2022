@@ -81,16 +81,16 @@ void MainWindow::updateStatistics()
         int pages = object.value("pages").toInt();
         pagesRead += pages;
         booksFinished++;
-        QDate startDate = QDate::fromString(object.value("dateStarted").toString(),"d.M.yyyy");
-        QDate finishDate = QDate::fromString(object.value("dateFinished").toString(),"d.M.yyyy");
+        QDate startDate = QDate::fromString(object.value("dateStarted").toString(),"d.M.yyyy г.");
+        QDate finishDate = QDate::fromString(object.value("dateFinished").toString(),"d.M.yyyy г.");
         daysReadingBooks += startDate.daysTo(finishDate);
 
-        if(pages<100) {booksByPages[0]++;}
-        else if(pages<101) {booksByPages[1]++;}
-        else if(pages<201) {booksByPages[2]++;}
-        else if(pages<301) {booksByPages[3]++;}
-        else if(pages<401) {booksByPages[4]++;}
-        else if(pages<501) {booksByPages[5]++;}
+        if(pages<101) {booksByPages[0]++;}
+        else if(pages<201) {booksByPages[1]++;}
+        else if(pages<301) {booksByPages[2]++;}
+        else if(pages<401) {booksByPages[3]++;}
+        else if(pages<501) {booksByPages[4]++;}
+        else if(pages<601) {booksByPages[5]++;}
         else {booksByPages[6]++;}
 
         if(object.contains("genre"))
