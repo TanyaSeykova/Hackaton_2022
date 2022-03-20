@@ -61,5 +61,44 @@
         "series": "-",
         "source": 0,
         "translation": true
+    },
+    {
+        "author": "Лоис Макмастър Бюджолд",
+        "country": "САЩ",
+        "dateFinished": "18.11.2006 г.",
+        "datePublished": "1.7.2001 г.",
+        "datePublishedBulgaria": "1.8.2001 г.",
+        "dateStarted": "4.11.2006 г.",
+        "ficnonfic": 0,
+        "format": 0,
+        "genre": 1,
+        "language": "Английски",
+        "nameBook": "Бараяр",
+        "nameTemplate": "Разширен",
+        "notes": "",
+        "pages": 386,
+        "publisher": "Бард",
+        "score": 7,
+        "series": "Сагата Воркосиган",
+        "source": 1,
+        "translation": true
+    },
+    {
+        "author": "Дъглас Адамс",
+        "dateFinished": "23.10.2020 г.",
+        "dateStarted": "3.10.2020 г.",
+        "nameBook": "Ресторант на края на вселената",
+        "nameTemplate": "Основен",
+        "pages": 208,
+        "score": 8
+    },
+    {
+        "author": "Дъглас Адамс",
+        "dateFinished": "1.10.2020 г.",
+        "dateStarted": "27.9.2020 г.",
+        "nameBook": "Пътеводителя на галактическия стопаджия",
+        "nameTemplate": "Основен",
+        "pages": 208,
+        "score": 8
     }
 ]
