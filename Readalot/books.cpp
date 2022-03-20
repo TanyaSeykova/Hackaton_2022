@@ -88,9 +88,14 @@ void Books::loadTable()
         QTableWidgetItem *pages = new QTableWidgetItem(QString::number(books.at(i)["pages"].toInteger()));
         table->setItem(i, 5, pages);
 
+        QTableWidgetItem *goSymbol = new QTableWidgetItem("⌘");
+        goSymbol->setTextAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
+        table->setItem(i, 6, goSymbol);
+
     }
     //table->resizeColumnsToContents();
     table->resizeRowsToContents();
+    table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
 
 QString Books::getRating(int score)
