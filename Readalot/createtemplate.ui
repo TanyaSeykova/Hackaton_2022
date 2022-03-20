@@ -113,7 +113,7 @@ QPushButton:hover{
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QCheckBox" name="checkBoxName">
+      <widget class="QCheckBox" name="checkBoxNameBook">
        <property name="text">
         <string>Име</string>
        </property>
