@@ -202,8 +202,8 @@ void MainWindow::updatePiechart()
 
 void MainWindow::loadSideImages()
 {
-    QImage imageLeft = QImage("../resources/left.png").scaled(ui->picLeft->width(), ui->picLeft->height(), Qt::KeepAspectRatio);
-    QImage imageRight = QImage("../resources/right.png").scaled(ui->picRight->width(), ui->picRight->height(), Qt::KeepAspectRatio);
+    QImage imageLeft = QImage(QDir::currentPath() + "/resources/left.png").scaled(ui->picLeft->width(), ui->picLeft->height(), Qt::KeepAspectRatio);
+    QImage imageRight = QImage(QDir::currentPath() + "/resources/right.png").scaled(ui->picRight->width(), ui->picRight->height(), Qt::KeepAspectRatio);
     ui->picLeft->setScaledContents(true);
     ui->picLeft->setPixmap(QPixmap::fromImage(imageLeft));
     ui->picRight->setScaledContents(true);
