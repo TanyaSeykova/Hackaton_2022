@@ -25,6 +25,7 @@ Books::Books(QWidget *parent) :
 
     table = new QTableWidget();
     ui->verticalLayout->addWidget(table);
+    table->setEditTriggers(QAbstractItemView::NoEditTriggers);
     loadTable();
     connect(table,SIGNAL(cellClicked(int,int)),this,SLOT(openBook(int,int)));
 }
@@ -70,7 +71,7 @@ void Books::loadTable()
         QTableWidgetItem *author = new QTableWidgetItem(books.at(i)["author"].toString());
         table->setItem(i, 1, author);
 
-        QTableWidgetItem *rating = new QTableWidgetItem(QString::number(books.at(i)["score"].toDouble()));
+        QTableWidgetItem *rating = new QTableWidgetItem(getRating(books.at(i)["score"].toInteger()));
         table->setItem(i, 2, rating);
 
         QTableWidgetItem *started = new QTableWidgetItem(books.at(i)["dateStarted"].toString());
@@ -86,6 +87,23 @@ void Books::loadTable()
     }
     //table->resizeColumnsToContents();
     table->resizeRowsToContents();
+}
+
+QString Books::getRating(int score)
+{
+    switch (score) {
+        case 0: return "⭐"; break;
+        case 1: return "⭐1/2"; break;
+        case 2: return "⭐⭐"; break;
+        case 3: return "⭐⭐1/2"; break;
+        case 4: return "⭐⭐⭐"; break;
+        case 5: return "⭐⭐⭐1/2"; break;
+        case 6: return "⭐⭐⭐⭐"; break;
+        case 7: return "⭐⭐⭐⭐1/2"; break;
+        case 8: return "⭐⭐⭐⭐⭐"; break;
+
+    default: return "-";
+    }
 }
 
 
