@@ -30,6 +30,7 @@ private:
     void populateFromTemplate(QJsonValue currTemp);
     void populateEdit();
     void writeBookInformation(QJsonObject book);
+    QDate getDateFromString(QString dateStr);
     int indexClicked;
 };
 

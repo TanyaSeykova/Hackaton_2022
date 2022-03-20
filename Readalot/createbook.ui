@@ -892,6 +892,23 @@ QLineEdit {
    </item>
    <item row="17" column="5">
     <widget class="QPushButton" name="pushButtonSave">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-radius: 6px;
+	border-width: 2px;
+	background-color: rgb(119, 106, 166);
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font: 16pt &quot;Monotype Corsiva&quot;;
+	margin: 0 40px 0 40px;
+}
+QPushButton:hover{
+	background-color: rgb(212, 203, 242);
+	color: rgb(0,0,0);
+}</string>
+     </property>
      <property name="text">
       <string>Запиши</string>
      </property>
@@ -920,6 +937,23 @@ QLineEdit {
    </item>
    <item row="17" column="4">
     <widget class="QPushButton" name="pushButtonDelete">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-radius: 6px;
+	border-width: 2px;
+	background-color: rgb(119, 106, 166);
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font: 16pt &quot;Monotype Corsiva&quot;;
+	margin: 0 40px 0 40px;
+}
+QPushButton:hover{
+	background-color: rgb(212, 203, 242);
+	color: rgb(0,0,0);
+}</string>
+     </property>
      <property name="text">
       <string>Изтрий</string>
      </property>

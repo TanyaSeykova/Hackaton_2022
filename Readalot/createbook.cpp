@@ -307,127 +307,103 @@ void CreateBook::writeBookInformation(QJsonObject book)
 {
     ui->comboBoxTemplate->setCurrentText(book["nameTemplate"].toString());
     if(ui->lineEditName->isVisible()){
-        //book["nameBook"] = ui->lineEditName->text();
         ui->lineEditName->setText(book["nameBook"].toString());
     }
     if(ui->lineEditAuthor->isVisible()){
-        //book["author"] = ui->lineEditAuthor->text();
         ui->lineEditAuthor->setText(book["author"].toString());
 
     }
     if(ui->lineEditSeries->isVisible()){
-        //book["series"] = ui->lineEditSeries->text();
         ui->lineEditSeries->setText(book["series"].toString());
     }
     if(ui->dateEditStarted->isVisible()){
-        //book["dateStarted"] = ui->dateEditStarted->text();
-        ui->dateEditStarted->setDate(QDate::fromString(book["dateStarted"].toString()));
+        ui->dateEditStarted->setDate(getDateFromString(book["dateStarted"].toString()));
     }
     if(ui->dateEditFinished->isVisible()){
-        //book["dateFinished"] = ui->dateEditFinished->text();
-        ui->dateEditFinished->setDate(QDate::fromString(book["dateFinished"].toString()));
+        ui->dateEditFinished->setDate(getDateFromString(book["dateFinished"].toString()));
     }
     if(ui->comboBoxScore->isVisible()){
-        //book["score"] = ui->comboBoxScore->currentIndex();
         ui->comboBoxScore->setCurrentIndex(book["score"].toInteger());
     }
     if(ui->lineEditPublisher->isVisible()){
-        //book["publisher"] = ui->lineEditPublisher->text();
         ui->lineEditPublisher->setText(book["publisher"].toString());
     }
     if(ui->dateEditPublished->isVisible()){
-        //book["datePublished"] = ui->dateEditPublished->text();
-        ui->dateEditPublished->setDate(QDate::fromString(book["datePublished"].toString()));
+        ui->dateEditPublished->setDate(getDateFromString(book["datePublished"].toString()));
     }
     if(ui->dateEditPublishedBulgaria->isVisible()){
-        //book["datePublishedBulgaria"] = ui->dateEditPublishedBulgaria->text();
-        ui->dateEditPublishedBulgaria->setDate(QDate::fromString(book["datePublishedBulgaria"].toString()));
+        ui->dateEditPublishedBulgaria->setDate(getDateFromString(book["datePublishedBulgaria"].toString()));
     }
     if(ui->lineEditPages->isVisible()){
-        //book["pages"] = ui->lineEditPages->text().toInt();
         ui->lineEditPages->setText(QString::number(book["pages"].toInt()));
     }
     if(ui->comboBoxFormat->isVisible()){
-        //book["format"] = ui->comboBoxFormat->currentIndex();
         ui->comboBoxFormat->setCurrentIndex(book["format"].toInteger());
     }
     if(ui->comboBoxFicnonfic->isVisible()){
-        //book["ficnonfic"] = ui->comboBoxFicnonfic->currentIndex();
         ui->comboBoxFicnonfic->setCurrentIndex(book["ficnonfic"].toInteger());
     }
     if(ui->comboBoxGenre->isVisible()){
-        //book["genre"] = ui->comboBoxGenre->currentIndex();
         ui->comboBoxGenre->setCurrentIndex(book["genre"].toInteger());
     }
     if(ui->comboBoxSource->isVisible()){
-        //book["source"] = ui->comboBoxSource->currentIndex();
         ui->comboBoxSource->setCurrentIndex(book["source"].toInteger());
     }
     if(ui->checkBoxTranslation->isVisible()){
-        //book["translation"] = ui->checkBoxTranslation->isChecked();
         ui->checkBoxTranslation->setChecked(book["translation"].toBool());
     }
     if(ui->lineEditLanguage->isVisible()){
-        //book["language"] = ui->lineEditLanguage->text();
         ui->lineEditLanguage->setText(book["language"].toString());
     }
     if(ui->lineEditCountry->isVisible()){
-        //book["country"] = ui->lineEditCountry->text();
         ui->lineEditCountry->setText(book["country"].toString());
     }
 
     if(ui->comboBoxSpicy->isVisible()){
-        //book["spicy"] = ui->comboBoxSpicy->currentIndex();
         ui->comboBoxSpicy->setCurrentIndex(book["spicy"].toInteger());
     }
     if(ui->textEditTropes->isVisible()){
-        //book["tropes"] = ui->textEditTropes->toPlainText();
         ui->textEditTropes->setPlainText(book["tropes"].toString());
     }
     if(ui->comboBoxFantasyKind->isVisible()){
-        //book["fantasyKind"] = ui->comboBoxFantasyKind->currentIndex();
         ui->comboBoxFantasyKind->setCurrentIndex(book["fantasyKind"].toInteger());
     }
     if(ui->comboBoxMagicSystem->isVisible()){
-        //book["magicSystem"] = ui->comboBoxMagicSystem->currentIndex();
         ui->comboBoxMagicSystem->setCurrentIndex(book["magicSystem"].toInteger());
     }
     if(ui->lineEditCountry->isVisible()){
-        //book["country"] = ui->lineEditCountry->text();
         ui->lineEditCountry->setText(book["country"].toString());
     }
     if(ui->comboBoxScifiKind->isVisible()){
-        //book["scifiKind"] = ui->comboBoxScifiKind->currentIndex();
         ui->comboBoxScifiKind->setCurrentIndex(book["scifiKind"].toInteger());
     }
     if(ui->comboBoxFuture->isVisible()){
-        //book["future"] = ui->comboBoxFuture->currentIndex();
         ui->comboBoxFuture->setCurrentIndex(book["future"].toInteger());
     }
     if(ui->comboBoxMystery->isVisible()){
-        //book["mystery"] = ui->comboBoxMystery->currentIndex();
         ui->comboBoxMystery->setCurrentIndex(book["mystery"].toInteger());
     }
     if(ui->comboBoxScary->isVisible()){
-        //book["scary"] = ui->comboBoxScary->currentIndex();
         ui->comboBoxScary->setCurrentIndex(book["scary"].toInteger());
     }
     if(ui->comboBoxDisgust->isVisible()){
-        //book["disgust"] = ui->comboBoxDisgust->currentIndex();
         ui->comboBoxDisgust->setCurrentIndex(book["disgust"].toInteger());
     }
     if(ui->lineEditEpoch->isVisible()){
-        //book["epoch"] = ui->lineEditEpoch->text();
         ui->lineEditEpoch->setText(book["epoch"].toString());
     }
     if(ui->comboBoxCorrectness->isVisible()){
-        //book["correctness"] = ui->comboBoxCorrectness->currentIndex();
         ui->comboBoxCorrectness->setCurrentIndex(book["correctness"].toInteger());
     }
     if(ui->textEditNotes->isVisible()){
-        //book["notes"] = ui->textEditNotes->toPlainText();
         ui->textEditNotes->setPlainText(book["notes"].toString());
     }
+}
+
+QDate CreateBook::getDateFromString(QString dateStr)
+{
+    QStringList list = dateStr.split(".");
+    return QDate(list[2].toInt(), list[1].toInt(), list[0].toInt());
 }
 
 void CreateBook::on_pushButtonLoad_clicked()
@@ -553,6 +529,11 @@ void CreateBook::on_pushButtonSave_clicked()
 
 void CreateBook::on_pushButtonDelete_clicked()
 {
+    QMessageBox::StandardButton reply;
+      reply = QMessageBox::question(this, "Изтриване на книга", "Наистина ли искате да изтриете книгата от колекцията си?",
+                                    QMessageBox::Yes|QMessageBox::No);
+
+    if(reply == QMessageBox::No) return;
     QJsonArray books = readBooks();
     books.removeAt(indexClicked);
     saveToFile(books, "books.json");

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QTableWidget>
+#include <QJsonArray>
 
 namespace Ui {
 class Books;
@@ -21,9 +22,13 @@ private slots:
     void on_addBookButton_clicked();
 
     void openBook(int row, int column);
+    void on_pushButtonReload_clicked();
+
 private:
     Ui::Books *ui;
     QTableWidget *table;
+    QJsonArray books;
+    void loadTable();
 };
 
 #endif // BOOKS_H
