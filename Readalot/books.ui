@@ -32,57 +32,43 @@ QPushButton{
 QPushButton:hover{
 	background-color: rgb(212, 203, 242);
 	color: rgb(0,0,0);
+}
+QTableView::item{
+	border-bottom: 1px solid black;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,8">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,25,2">
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,25,1,1,1">
        <item>
-        <widget class="QPushButton" name="addBookButton">
+        <widget class="QPushButton" name="pushButtonBack">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
            <height>0</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>34</width>
-           <height>34</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-           <pointsize>16</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Добави книга&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 16pt &quot;Arial&quot;;</string>
-         </property>
          <property name="text">
-          <string>+</string>
+          <string>Назад</string>
          </property>
         </widget>
        </item>
        <item>
-        <spacer name="horizontalSpacer_2">
+        <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>40</width>
            <height>20</height>
           </size>
          </property>
@@ -122,34 +108,51 @@ QPushButton:hover{
         </widget>
        </item>
        <item>
-        <spacer name="horizontalSpacer">
+        <spacer name="horizontalSpacer_2">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
+           <width>10</width>
            <height>20</height>
           </size>
          </property>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonBack">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+        <widget class="QPushButton" name="addBookButton">
          <property name="minimumSize">
           <size>
            <width>0</width>
            <height>0</height>
           </size>
          </property>
+         <property name="maximumSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>16</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Добави книга&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 16pt &quot;Arial&quot;;</string>
+         </property>
          <property name="text">
-          <string>Назад</string>
+          <string>+</string>
          </property>
         </widget>
        </item>

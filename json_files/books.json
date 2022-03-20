@@ -1,22 +1,25 @@
 [
-   {
-	  "nameTemplate" : "Основен",
-      "nameBook":"Вещерът",
-      "author":"Анджей Сапковски",
-      "dateStarted":"1.2.2022",
-      "dateFinished":"10.2.2022",
-      "score":4.5,
-      "pages":336
-   },
-   {
-	  "nameTemplate" : "Романтика",
-      "nameBook":"Кеъф",
-      "author":"Ксуфь",
-      "dateStarted":"6.3.2022",
-      "dateFinished":"16.3.2022",
-      "score":3,
-      "pages":212,
-      "spicy":2.5,
-      "tropes":"enemies-to-lovers, forced proximity"
-   }
+    {
+        "author": "Анджей Сапковски",
+        "dateFinished": "23.2.2022 г.",
+        "dateStarted": "21.2.2022 г.",
+        "nameBook": "Вещерът",
+        "nameTemplate": "Основен",
+        "pages": 336,
+        "score": 7
+    },
+    {
+        "author": "Yeonmi Park with Maryanne Vollers / Йонми Парк и Мариан Волърс",
+        "dateFinished": "17.2.2022 г.",
+        "datePublished": "29.9.2015 г.",
+        "dateStarted": "11.2.2022 г.",
+        "format": 0,
+        "genre": 9,
+        "nameBook": "In Order To Live / За да живея",
+        "nameTemplate": "Мемоар",
+        "pages": 368,
+        "publisher": "Киви",
+        "score": 8,
+        "source": 0
+    }
 ]
