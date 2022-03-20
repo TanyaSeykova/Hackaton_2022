@@ -20,6 +20,7 @@ public:
 
 private slots:
     void on_pushButtonAddTemplate_clicked();
+    void on_pushButtonBack_clicked();
     void on_editTemplate();
 
 private:

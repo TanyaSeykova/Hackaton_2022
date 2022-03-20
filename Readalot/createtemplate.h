@@ -23,6 +23,7 @@ public:
 private slots:
     void on_pushButtonSave_clicked();
     void on_pushButtonRemove_clicked();
+    void on_pushButtonBack_clicked();
     void on_editTemplate();
 
 private:

@@ -26,24 +26,94 @@ QPushButton{
 	color: rgb(255,255,255);
 	font-weight: bold;
 	font: 16pt &quot;Monotype Corsiva&quot;;
-	margin: 0 40px 0 40px;
 }
 QPushButton:hover{
 	background-color: rgb(212, 203, 242);
 	color: rgb(0,0,0);
 }</string>
   </property>
-  <widget class="QPushButton" name="pushButtonAddTemplate">
+  <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>440</y>
-     <width>211</width>
-     <height>51</height>
+     <x>0</x>
+     <y>0</y>
+     <width>701</width>
+     <height>511</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="titleLabel">
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font: 48pt &quot;Niagara Engraved&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ШАБЛОНИ</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="templatesScrollArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #776655;</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="templatesWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>680</width>
+         <height>298</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="templatesList"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,5,3,2">
+      <item>
+       <widget class="QWidget" name="widget" native="true"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonAddTemplate">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
 	border-radius: 6px;
 	border-width: 2px;
 	background-color: rgb(119, 106, 166);
@@ -57,85 +127,28 @@ QPushButton:hover{
 	background-color: rgb(212, 203, 242);
 	color: rgb(0,0,0);
 }</string>
-   </property>
-   <property name="text">
-    <string>Добави</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="titleLabel">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>10</y>
-     <width>321</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: black;
-font: 48pt &quot;Niagara Engraved&quot;;</string>
-   </property>
-   <property name="text">
-    <string>ШАБЛОНИ</string>
-   </property>
-  </widget>
-  <widget class="QScrollArea" name="templatesScrollArea">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>120</y>
-     <width>661</width>
-     <height>301</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>300</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background: #776655;</string>
-   </property>
-   <property name="verticalScrollBarPolicy">
-    <enum>Qt::ScrollBarAlwaysOn</enum>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="templatesWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>638</width>
-      <height>299</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <layout class="QVBoxLayout" name="templatesList"/>
-     </item>
-    </layout>
-   </widget>
+        </property>
+        <property name="text">
+         <string>Добави</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true"/>
+      </item>
+      <item alignment="Qt::AlignBottom">
+       <widget class="QPushButton" name="pushButtonBack">
+        <property name="styleSheet">
+         <string notr="true">margin: 10px 10px;</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

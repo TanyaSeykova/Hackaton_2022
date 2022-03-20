@@ -23,6 +23,8 @@ private slots:
 
     void on_pushButtonDelete_clicked();
 
+    void on_pushButtonBack_clicked();
+
 private:
     Ui::CreateBook *ui;
     void hideMenus();

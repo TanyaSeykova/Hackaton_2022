@@ -540,3 +540,9 @@ void CreateBook::on_pushButtonDelete_clicked()
     QMessageBox::information(this, "Изтриване на книга", "Книгата беше изтрита успешно!");
 }
 
+
+void CreateBook::on_pushButtonBack_clicked()
+{
+    this->close();
+}
+

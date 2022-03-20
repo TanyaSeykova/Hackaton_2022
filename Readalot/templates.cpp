@@ -41,6 +41,11 @@ void Templates::on_pushButtonAddTemplate_clicked()
     window.exec();
 }
 
+void Templates::on_pushButtonBack_clicked()
+{
+    this->close();
+}
+
 void Templates::on_editTemplate()
 {
     QString name = qobject_cast<QPushButton*>(sender())->text();

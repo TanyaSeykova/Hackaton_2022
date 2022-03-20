@@ -420,20 +420,7 @@ QPushButton:hover{
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout_7">
-     <item row="0" column="0">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="2">
+     <item row="0" column="3">
       <widget class="QPushButton" name="pushButtonSave">
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -456,7 +443,7 @@ QPushButton:hover{
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
+     <item row="0" column="2">
       <widget class="QPushButton" name="pushButtonRemove">
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -476,6 +463,42 @@ QPushButton:hover{
        </property>
        <property name="text">
         <string>Изтрий</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButtonBack">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border-radius: 6px;
+	border-width: 2px;
+	background-color: rgb(119, 106, 166);
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font: 20pt &quot;Monotype Corsiva&quot;;
+}
+QPushButton:hover{
+	background-color: rgb(212, 203, 242);
+	color: rgb(0,0,0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Назад</string>
        </property>
       </widget>
      </item>
