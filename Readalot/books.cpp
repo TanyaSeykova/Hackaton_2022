@@ -8,6 +8,7 @@
 #include <QFormLayout>
 #include <QTableWidget>
 #include <QThread>
+#include <QHeaderView>
 #include "utilities.h"
 #include "createbook.h"
 
@@ -15,7 +16,8 @@
 
 
 Books::Books(QWidget *parent) :
-    QDialog(parent),
+    QDialog(parent, Qt::WindowMinMaxButtonsHint
+            | Qt::WindowContextHelpButtonHint | Qt::WindowCloseButtonHint),
     ui(new Ui::Books)
 {
     ui->setupUi(this);
@@ -26,6 +28,7 @@ Books::Books(QWidget *parent) :
     table = new QTableWidget();
     ui->verticalLayout->addWidget(table);
     table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     loadTable();
     connect(table,SIGNAL(cellClicked(int,int)),this,SLOT(openBook(int,int)));
 }

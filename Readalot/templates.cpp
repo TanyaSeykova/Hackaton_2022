@@ -7,7 +7,8 @@
 #include <QGroupBox>
 
 Templates::Templates(QWidget *parent) :
-    QDialog(parent),
+    QDialog(parent, Qt::WindowMinMaxButtonsHint
+            | Qt::WindowContextHelpButtonHint | Qt::WindowCloseButtonHint),
     ui(new Ui::Templates)
 {
     ui->setupUi(this);

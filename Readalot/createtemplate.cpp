@@ -12,7 +12,8 @@
 #include "utilities.h"
 
 createTemplate::createTemplate(QWidget *parent) :
-    QDialog(parent),
+    QDialog(parent, Qt::WindowMinMaxButtonsHint
+            | Qt::WindowContextHelpButtonHint | Qt::WindowCloseButtonHint),
     ui(new Ui::createTemplate)
 {
    ui->setupUi(this);

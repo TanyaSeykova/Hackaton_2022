@@ -6,7 +6,8 @@
 #include <QMessageBox>
 
 CreateBook::CreateBook(int _indexClicked, QWidget *parent) :
-    QDialog(parent),
+    QDialog(parent, Qt::WindowMinMaxButtonsHint
+            | Qt::WindowContextHelpButtonHint | Qt::WindowCloseButtonHint),
     ui(new Ui::CreateBook)
 {
     ui->setupUi(this);
@@ -229,7 +230,7 @@ void CreateBook::populateFromTemplate(QJsonValue currTemp)
 
 
 
-    if(currTemp["magicKind"].toBool() != false) {
+    if(currTemp["magicSystem"].toBool() != false) {
         ui->labelMagicSystem->setVisible(true);
         ui->comboBoxMagicSystem->setVisible(true);
     }
