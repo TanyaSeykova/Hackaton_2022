@@ -27,7 +27,8 @@ Books::Books(QWidget *parent) :
     table = new QTableWidget();
     ui->verticalLayout->addWidget(table);
     table->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    table->setShowGrid(false);
+
+    table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     loadTable();
     connect(table,SIGNAL(cellClicked(int,int)),this,SLOT(openBook(int,int)));
 }

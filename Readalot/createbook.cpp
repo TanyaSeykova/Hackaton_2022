@@ -401,11 +401,6 @@ void CreateBook::writeBookInformation(QJsonObject book)
     }
 }
 
-QDate CreateBook::getDateFromString(QString dateStr)
-{
-    return QDate::fromString(dateStr, "d.M.yyyy г.");
-}
-
 void CreateBook::on_pushButtonLoad_clicked()
 {
     QJsonArray templates = readTemplates();
@@ -540,9 +535,12 @@ void CreateBook::on_pushButtonDelete_clicked()
     QMessageBox::information(this, "Изтриване на книга", "Книгата беше изтрита успешно!");
 }
 
+QDate CreateBook::getDateFromString(QString dateStr)
+{
+    return QDate::fromString(dateStr, "d.M.yyyy г.");
+}
 
 void CreateBook::on_pushButtonBack_clicked()
 {
     this->close();
 }
-
