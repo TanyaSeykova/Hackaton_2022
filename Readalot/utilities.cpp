@@ -1,6 +1,8 @@
 #include <utilities.h>
 #include <QDir>
 #include <QJsonArray>
+#include <QLayout>
+#include <QWidget>
 
 QJsonArray readTemplates()
 {
@@ -36,5 +38,24 @@ void saveToFile(QJsonArray data, QString filename)
 
     QTextStream out(&jsonFile);
     out << QJsonDocument(data).toJson(QJsonDocument::Indented);
+}
+
+void removeChildren(QLayout* layout)
+{
+    QLayoutItem* child;
+    while(layout->count()!=0)
+    {
+        child = layout->takeAt(0);
+        if(child->layout() != 0)
+        {
+            removeChildren(child->layout());
+        }
+        else if(child->widget() != 0)
+        {
+            delete child->widget();
+        }
+
+        delete child;
+    }
 }
 

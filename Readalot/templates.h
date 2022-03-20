@@ -2,6 +2,7 @@
 #define TEMPLATES_H
 
 #include <QDialog>
+#include <QJsonArray>
 #include "utilities.h"
 
 namespace Ui {
@@ -23,9 +24,14 @@ private slots:
     void on_pushButtonBack_clicked();
     void on_editTemplate();
 
+    void on_lineEditSearch_textChanged(const QString &arg1);
+
 private:
     Ui::Templates *ui;
+    QJsonArray templates;
+
     void populateTemplates();
+    QPushButton* createTemplateButton(const QJsonValue& currTemplate);
 };
 
 #endif // TEMPLATES_H
