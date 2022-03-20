@@ -1,4 +1,5 @@
 #include "createtemplate.h"
+#include "templates.h"
 #include "ui_createtemplate.h"
 
 #include <QDir>
@@ -81,15 +82,6 @@ int createTemplate::exists(QString currentName)
     return -1;
 }
 
-void createTemplate::saveToFile()
-{
-    QFile jsonFile(QDir::currentPath() + "/json_files/templates.json");
-    if (!jsonFile.open(QIODevice::WriteOnly | QIODevice::Text)) return;
-
-    QTextStream out(&jsonFile);
-    out << QJsonDocument(this->templates).toJson(QJsonDocument::Indented);
-}
-
 void createTemplate::setTemplateVars()
 {
     QJsonValue currentObj = this->templates.at(this->currentTemplateIndex);
@@ -122,7 +114,7 @@ void createTemplate::on_pushButtonSave_clicked()
     else
         this->templates[index] = currentObj;
 
-    this->saveToFile();
+    saveToFile(this->templates, "templates.json");
 
     QMessageBox::warning(this, "Създаване на шаблон", "Успешно запазен шаблон!");
 }
@@ -141,7 +133,7 @@ void createTemplate::on_editTemplate()
 
     this->templates[this->currentTemplateIndex] = currentObj;
 
-    this->saveToFile();
+    saveToFile(this->templates, "templates.json");
 
     QMessageBox::information(this, "Редактиране на шаблон", "Успешно запазен шаблон!");
 }
@@ -150,10 +142,17 @@ void createTemplate::on_pushButtonRemove_clicked()
 {
     this->templates.removeAt(this->currentTemplateIndex);
 
-    this->saveToFile();
+    saveToFile(this->templates, "templates.json");
 
     QMessageBox::information(this, "Премахване на шаблон", "Шаблонът е премахнат успешно.");
 
     this->close();
 }
 
+void createTemplate::closeEvent(QCloseEvent *event)
+{
+    Templates window;
+    window.setModal(true);
+    this->QDialog::closeEvent(event);
+    window.exec();
+}

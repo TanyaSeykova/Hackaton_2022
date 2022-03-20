@@ -18,6 +18,8 @@ public:
     explicit createTemplate(int index, QWidget *parent = nullptr);
     ~createTemplate();
 
+    void closeEvent(QCloseEvent *event);
+
 private slots:
     void on_pushButtonSave_clicked();
     void on_pushButtonRemove_clicked();
@@ -31,7 +33,6 @@ private:
     void setDefault();
     QJsonObject getCurrentObject();
     int exists(QString currentName);
-    void saveToFile();
     void setTemplateVars();
 };
 

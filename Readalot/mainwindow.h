@@ -34,7 +34,16 @@ private slots:
 
     void on_pushButtonTemplates_clicked();
 
+    void refresh();
+
 private:
     Ui::MainWindow *ui;
+    QVector<int> booksByPages;
+    QHash<QString,int> genres;
+
+    void updateStatistics();
+    void updateBarplot();
+    void updatePiechart();
+    void loadSideImages();
 };
 #endif // MAINWINDOW_H

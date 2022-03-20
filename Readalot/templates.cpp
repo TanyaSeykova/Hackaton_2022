@@ -37,6 +37,7 @@ void Templates::on_pushButtonAddTemplate_clicked()
 {
     createTemplate window;
     window.setModal(true);
+    this->close();
     window.exec();
 }
 
@@ -51,9 +52,15 @@ void Templates::on_editTemplate()
         {
             createTemplate window(i);
             window.setModal(true);
+            this->close();
             window.exec();
             return;
         }
     }
 }
 
+
+void Templates::closeEvent(QCloseEvent *event)
+{
+    emit this->destroyed();
+}
