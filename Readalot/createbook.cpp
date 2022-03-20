@@ -403,8 +403,7 @@ void CreateBook::writeBookInformation(QJsonObject book)
 
 QDate CreateBook::getDateFromString(QString dateStr)
 {
-    QStringList list = dateStr.split(".");
-    return QDate(list[2].left(4).toInt(), list[1].toInt(), list[0].toInt());
+    return QDate::fromString(dateStr, "d.M.yyyy г.");
 }
 
 void CreateBook::on_pushButtonLoad_clicked()
@@ -432,10 +431,10 @@ void CreateBook::on_pushButtonSave_clicked()
         book["series"] = ui->lineEditSeries->text();
     }
     if(ui->dateEditStarted->isVisible()){
-        book["dateStarted"] = ui->dateEditStarted->text();
+        book["dateStarted"] = ui->dateEditStarted->date().toString("d.M.yyyy г.");
     }
     if(ui->dateEditFinished->isVisible()){
-        book["dateFinished"] = ui->dateEditFinished->text();
+        book["dateFinished"] = ui->dateEditFinished->date().toString("d.M.yyyy г.");
     }
     if(ui->comboBoxScore->isVisible()){
         book["score"] = ui->comboBoxScore->currentIndex();
@@ -444,10 +443,10 @@ void CreateBook::on_pushButtonSave_clicked()
         book["publisher"] = ui->lineEditPublisher->text();
     }
     if(ui->dateEditPublished->isVisible()){
-        book["datePublished"] = ui->dateEditPublished->text();
+        book["datePublished"] = ui->dateEditPublished->date().toString("d.M.yyyy г.");
     }
     if(ui->dateEditPublishedBulgaria->isVisible()){
-        book["datePublishedBulgaria"] = ui->dateEditPublishedBulgaria->text();
+        book["datePublishedBulgaria"] = ui->dateEditPublishedBulgaria->date().toString("d.M.yyyy г.");
     }
     if(ui->lineEditPages->isVisible()){
         book["pages"] = ui->lineEditPages->text().toInt();
