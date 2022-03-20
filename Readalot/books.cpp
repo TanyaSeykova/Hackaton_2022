@@ -24,11 +24,9 @@ Books::Books(QWidget *parent) :
 
     this->showMaximized();
 
-
     table = new QTableWidget();
     ui->verticalLayout->addWidget(table);
     table->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     table->setShowGrid(false);
     loadTable();
     connect(table,SIGNAL(cellClicked(int,int)),this,SLOT(openBook(int,int)));
@@ -58,40 +56,49 @@ void Books::openBook(int row, int column)
     }
 }
 
+void Books::addBookRow(int tr, int bookIndex)
+{
+    table->insertRow(tr);
+
+    QTableWidgetItem *name = new QTableWidgetItem(books.at(bookIndex)["nameBook"].toString());
+    table->setItem(tr, 0, name);
+
+    QTableWidgetItem *author = new QTableWidgetItem(books.at(bookIndex)["author"].toString());
+    table->setItem(tr, 1, author);
+
+    QTableWidgetItem *rating = new QTableWidgetItem(getRating(books.at(bookIndex)["score"].toInteger()));
+    table->setItem(tr, 2, rating);
+
+    QTableWidgetItem *started = new QTableWidgetItem(books.at(bookIndex)["dateStarted"].toString());
+    table->setItem(tr, 3, started);
+
+    QTableWidgetItem *finished = new QTableWidgetItem(books.at(bookIndex)["dateFinished"].toString());
+    table->setItem(tr, 4, finished);
+
+    QTableWidgetItem *pages = new QTableWidgetItem(QString::number(books.at(bookIndex)["pages"].toInteger()));
+    table->setItem(tr, 5, pages);
+
+    QTableWidgetItem *goSymbol = new QTableWidgetItem("⌘");
+    goSymbol->setTextAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
+    table->setItem(tr, 6, goSymbol);
+}
+
 void Books::loadTable()
 {
     books = readBooks();
     QStringList headers = {"Име", "Автор", "Оценка", "Започната на", "Приключена на", "Брой страници", "Отиди на книга"};
     //table->resize(books.size(), headers.size());
-    table->setRowCount(books.size());
+    // table->setRowCount(books.size());
+    for (int i = table->rowCount()-1; i>=0; i--) table->removeRow(i);
     table->setColumnCount(headers.size());
     table->setHorizontalHeaderLabels(headers);
 
-    for (int i = 0; i<books.size(); i++ ) {
+    QString searchText = ui->lineEditSearch->text();
 
-        QTableWidgetItem *name = new QTableWidgetItem(books.at(i)["nameBook"].toString());
-        table->setItem(i, 0, name);
-
-        QTableWidgetItem *author = new QTableWidgetItem(books.at(i)["author"].toString());
-        table->setItem(i, 1, author);
-
-        QTableWidgetItem *rating = new QTableWidgetItem(getRating(books.at(i)["score"].toInteger()));
-        table->setItem(i, 2, rating);
-
-        QTableWidgetItem *started = new QTableWidgetItem(books.at(i)["dateStarted"].toString());
-        table->setItem(i, 3, started);
-
-
-        QTableWidgetItem *finished = new QTableWidgetItem(books.at(i)["dateFinished"].toString());
-        table->setItem(i, 4, finished);
-
-        QTableWidgetItem *pages = new QTableWidgetItem(QString::number(books.at(i)["pages"].toInteger()));
-        table->setItem(i, 5, pages);
-
-        QTableWidgetItem *goSymbol = new QTableWidgetItem("⌘");
-        goSymbol->setTextAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
-        table->setItem(i, 6, goSymbol);
-
+    for (int i = 0, j = 0; i < books.size(); i++)
+    {
+        if (searchText == "" || books.at(i)["nameBook"].toString().toLower().contains(searchText.toLower()))
+            this->addBookRow(j++, i);
     }
     //table->resizeColumnsToContents();
     table->resizeRowsToContents();
@@ -126,5 +133,12 @@ void Books::on_pushButtonReload_clicked()
 void Books::on_pushButtonBack_clicked()
 {
     this->close();
+}
+
+
+void Books::on_lineEditSearch_textChanged(const QString &text)
+{
+    table->clear();
+    loadTable();
 }
 

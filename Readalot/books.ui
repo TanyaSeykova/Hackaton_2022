@@ -41,7 +41,7 @@ QTableView::item{
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,8">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,25,1,1,1">
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,25,0,0,0,1,1,1">
        <item>
         <widget class="QPushButton" name="pushButtonBack">
          <property name="sizePolicy">
@@ -75,6 +75,29 @@ QTableView::item{
         </spacer>
        </item>
        <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>🔍</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditSearch"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <widget class="QPushButton" name="pushButtonReload">
          <property name="minimumSize">
           <size>
@@ -90,7 +113,6 @@ QTableView::item{
          </property>
          <property name="font">
           <font>
-           <family>Arial</family>
            <pointsize>16</pointsize>
            <italic>false</italic>
            <bold>false</bold>
@@ -139,7 +161,6 @@ QTableView::item{
          </property>
          <property name="font">
           <font>
-           <family>Arial</family>
            <pointsize>16</pointsize>
            <italic>false</italic>
            <bold>false</bold>

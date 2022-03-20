@@ -26,12 +26,15 @@ private slots:
 
     void on_pushButtonBack_clicked();
 
+    void on_lineEditSearch_textChanged(const QString &arg1);
+
 private:
     Ui::Books *ui;
     QTableWidget *table;
     QJsonArray books;
     void loadTable();
     QString getRating(int score);
+    void addBookRow(int tr, int bookIndex);
 };
 
 #endif // BOOKS_H
